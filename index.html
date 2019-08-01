@@ -29,13 +29,23 @@
         var count = 0;
         var timer;
         window.onload = function() {
-            $("start").onclick = function() {
+            $('start').onclick = function() {
                 timer = setInterval(() => {
                     count++;
                     $('id_s').innerHTML = showNum(parseInt(count % 60));
                     $('id_m').innerHTML = showNum(parseInt(count / 60 % 60));
-                    $('id_h'.includes = showNum(parseInt(count / 3600)));
-                }, 100);
+                    $('id_h').innerHTML = showNum(parseInt(count / 3600));
+                }, 1000);
+            }
+            $('pouse').onclick = function() {
+                clearInterval(timer);
+            }
+            $('stop').onclick = function() {
+                clearInterval(timer);
+                count = 0;
+                $('id_s').innerHTML = "00";
+                $('id_m').innerHTML = "00";
+                $('id_h').innerHTML = "00";
             }
         }
 
