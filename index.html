@@ -24,10 +24,17 @@
             display: block;
             margin: 20px auto;
         }
+        
+        #pouse,
+        #stop {
+            pointer-events: none;
+            color: #969696;
+        }
     </style>
     <script>
         var count = 0;
         var timer;
+
         window.onload = function() {
             $('start').onclick = function() {
                 timer = setInterval(() => {
@@ -36,9 +43,16 @@
                     $('id_m').innerHTML = showNum(parseInt(count / 60 % 60));
                     $('id_h').innerHTML = showNum(parseInt(count / 3600));
                 }, 1000);
+                $('start').style.cssText = "pointer-events:none;color:#969696;";
+                $('pouse').style.cssText = "pointer-events:unset;color:buttontext;";
+                $('stop').style.cssText = "pointer-events:unset;color:buttontext;";
             }
             $('pouse').onclick = function() {
                 clearInterval(timer);
+                $('start').style.cssText = "poinster-events:unset;color:buttontext;";
+                $('pouse').style.cssText = "pointer-events:none;color:#969696;";
+                $('stop').style.cssText = "pointer-events:unset;color:buttontext;";
+
             }
             $('stop').onclick = function() {
                 clearInterval(timer);
@@ -46,6 +60,9 @@
                 $('id_s').innerHTML = "00";
                 $('id_m').innerHTML = "00";
                 $('id_h').innerHTML = "00";
+                $('start').style.cssText = "poinster-events:unset;color:buttontext;";
+                $('pouse').style.cssText = "poinster-events:none;color:#969696;";
+                $('stop').style.cssText = "poinster-events:none;color:#969696;";
             }
         }
 
