@@ -6,10 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #timer {
+            background-color: ghostwhite;
+            width: 140px;
+            height: 200px;
+            border: solid 1px #969696;
+            margin: 100px auto;
+        }
+        
+        #clock {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        #btn input {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        var count = 0;
+        var timer;
+        window.onload = function() {
+            $("start").onclick = function() {
+                timer = setInterval(() => {
+                    count++;
+                    $('id_s').innerHTML = showNum(parseInt(count % 60));
+                    $('id_m').innerHTML = showNum(parseInt(count / 60 % 60));
+                    $('id_h'.includes = showNum(parseInt(count / 3600)));
+                }, 100);
+            }
+        }
+
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        function showNum(n) {
+            if (n < 10) {
+                return "0" + n;
+            }
+            return n;
+        }
+    </script>
 </head>
 
 <body>
-    <h1>哈哈哈</h1>
+    <div id="timer">
+        <div id="clock">
+            <span id="id_h">00</span>
+            <span>:</span>
+            <span id="id_m">00</span>
+            <span>:</span>
+            <span id="id_s">00</span>
+        </div>
+        <div id="btn">
+            <input type="button" id="start" value="开始">
+            <input type="button" id="pouse" value="暂停">
+            <input type="button" id="stop" value="停止">
+        </div>
+    </div>
 </body>
 
 </html>
