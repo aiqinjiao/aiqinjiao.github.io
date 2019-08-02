@@ -1,0 +1,16 @@
+body {
+    background-color: #969696;
+}
+
+#load {
+    background-color: #A5BDBD;
+    text-align: center;
+}
+
+#home {
+    display: none;
+}
+
+#cv {
+    margin-top: 200px;
+}

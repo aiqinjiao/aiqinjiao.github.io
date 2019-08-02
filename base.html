@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        alert(screen.height);
+        alert(screen.width);
+    </script>
 </head>
 
 <body>
-    <h1>没有了</h1>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+        Your browser does not support the canvas element.
+        </canvas>
+
+    <script type="text/javascript">
+        var c = document.getElementById("myCanvas");
+        var cxt = c.getContext("2d");
+        cxt.fillStyle = "#FF0000";
+        cxt.beginPath();
+        cxt.arc(70, 18, 15, 0, Math.PI * 2, true);
+        cxt.closePath();
+        cxt.fill();
+    </script>
 </body>
 
 </html>

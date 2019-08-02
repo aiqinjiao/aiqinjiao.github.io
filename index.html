@@ -6,97 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        #timer {
-            background-color: ghostwhite;
-            width: 140px;
-            height: 200px;
-            border: solid 1px #969696;
-            margin: 100px auto;
-        }
-        
-        #clock {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        #btn input {
-            display: block;
-            margin: 20px auto;
-        }
-        
-        #pouse,
-        #stop {
-            pointer-events: none;
-            color: #969696;
-        }
-    </style>
-    <script>
-        var count = 0;
-        var timer;
-
-        window.onload = function() {
-            $('start').onclick = function() {
-                timer = setInterval(() => {
-                    count++;
-                    $('id_s').innerHTML = showNum(parseInt(count % 60));
-                    $('id_m').innerHTML = showNum(parseInt(count / 60 % 60));
-                    $('id_h').innerHTML = showNum(parseInt(count / 3600));
-                }, 1000);
-                $('start').style.cssText = "pointer-events:none;color:#969696;";
-                $('pouse').style.cssText = "pointer-events:unset;color:buttontext;";
-                $('stop').style.cssText = "pointer-events:unset;color:buttontext;";
-            }
-            $('pouse').onclick = function() {
-                clearInterval(timer);
-                $('start').style.cssText = "poinster-events:unset;color:buttontext;";
-                $('pouse').style.cssText = "pointer-events:none;color:#969696;";
-                $('stop').style.cssText = "pointer-events:unset;color:buttontext;";
-
-            }
-            $('stop').onclick = function() {
-                clearInterval(timer);
-                count = 0;
-                $('id_s').innerHTML = "00";
-                $('id_m').innerHTML = "00";
-                $('id_h').innerHTML = "00";
-                $('start').style.cssText = "poinster-events:unset;color:buttontext;";
-                $('pouse').style.cssText = "poinster-events:none;color:#969696;";
-                $('stop').style.cssText = "poinster-events:none;color:#969696;";
-            }
-        }
-
-        function $(id) {
-            return document.getElementById(id);
-        }
-
-        function showNum(n) {
-            if (n < 10) {
-                return "0" + n;
-            }
-            return n;
-        }
-    </script>
+    <link rel="shortcut-icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/ublog.css">
 </head>
 
 <body>
-    <div id="timer">
-        <div id="clock">
-            <span id="id_h">00</span>
-            <span>:</span>
-            <span id="id_m">00</span>
-            <span>:</span>
-            <span id="id_s">00</span>
-        </div>
-        <div id="btn">
-            <input type="button" id="start" value="开始">
-            <input type="button" id="pouse" value="暂停">
-            <input type="button" id="stop" value="停止">
-        </div>
+    <div id="load">
+        <canvas id="cv" width="200" height="200"></canvas>
     </div>
-    <div>
-        <a href="base.html">进入下一页</a>
+    <div id="home">
+        <h1>aaaaaaaaaabbbbbbbbbb</h1>
     </div>
+    <script src="static/js/jquery-3.4.1.min.js"></script>
+    <script src="static/js/ublog.js"></script>
 </body>
 
 </html>
