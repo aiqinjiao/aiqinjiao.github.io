@@ -1,7 +1,3 @@
-body {
-    background-color: #969696;
-}
-
 #load {
     background-color: #A5BDBD;
     text-align: center;
@@ -13,4 +9,28 @@ body {
 
 #cv {
     margin-top: 200px;
+}
+
+header {
+    background-color: #000000;
+    height: 240px;
+    padding: 60px 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.motto {
+    height: 60px;
+}
+
+.motto p {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.motto strong {
+    color: #ffffff;
 }
