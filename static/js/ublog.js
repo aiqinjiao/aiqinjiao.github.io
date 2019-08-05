@@ -8,7 +8,7 @@ $(document).ready(function() {
     var o = 0;
     var d = 0.5 * Math.PI;
     // 偏移弧度
-    var radian = 3 * Math.PI / 180;
+    var radian = 6 * Math.PI / 180;
     var oc = 0;
     var dc = radian;
 
@@ -40,7 +40,30 @@ $(document).ready(function() {
     setTimeout(function() {
         $('#load').css("display", 'none');
         $('#home').css("display", "block");
-    }, 1000);
+    }, 500);
+
+    $('.email').mouseenter(function() {
+        $('.myemail').css("display", "block");
+    }).mouseleave(function() {
+        $('.myemail').css("display", "none");
+    })
+
+    $('.wx').mouseenter(function() {
+        $('.myweixin').css("display", "block");
+    }).mouseleave(function() {
+        $('.myweixin').css("display", "none");
+    })
+
+    $('.qq').mouseenter(function() {
+        $('.myqq').css("display", "block");
+    }).mouseleave(function() {
+        $('.myqq').css("display", "none");
+    })
+
+    // 复制邮箱
+    $('.email').click(function() {
+        copyText(".mail");
+    })
 
 })
 
@@ -60,4 +83,14 @@ function dCircle(id, r, f, o, d) {
     // ctx.stroke();
     ctx.fillStyle = f;
     ctx.fill();
+}
+
+
+// 复制文本方法
+function copyText(elem) {
+    var a = $('<input type="text">').val($(elem).text());
+    a.appendTo(elem);
+    a.select();
+    document.execCommand("Copy");
+    a.remove();
 }
