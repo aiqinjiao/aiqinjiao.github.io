@@ -8,10 +8,12 @@
     <title>ublog</title>
     <link rel="shortcut-icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="static/css/reset.css">
-    <link rel="stylesheet" href="static/css/ublog.css">
+    <link rel="stylesheet" href="static/css/ublog.css" title="pc">
+    <link rel="stylesheet" href="static/css/ublog_mobile.css" title="mobile">
+
 </head>
 
-<body>
+<body style="display: none;">
     <div id="load">
         <canvas id="cv" width="200" height="200"></canvas>
     </div>
@@ -60,8 +62,33 @@
             <div>哈哈哈</div>
         </section>
     </div>
-    <script src="static/js/jquery-3.4.1.min.js"></script>
-    <script src="static/js/ublog.js"></script>
 </body>
+<script src="static/js/jquery-3.4.1.min.js"></script>
+<script src="static/js/ublog.js"></script>
+<script>
+    var title;
+
+    if (/mobile|phone|android|pad/.test(navigator.userAgent.toLowerCase())) {
+        title = 'mobile';
+    } else {
+        title = 'pc';
+    }
+    setStyle(title);
+
+    // 区分PC、mobile 加载不同的css
+    function setStyle() {
+        var i, links;
+        links = document.getElementsByTagName("link");
+        for (i = 0; links[i]; i++) {
+            if (links[i].getAttribute("rel").indexOf("style") != -1 && links[i].getAttribute("title")) {
+                links[i].disabled = true;
+                if (links[i].getAttribute("title").indexOf(title) != -1) {
+                    links[i].disabled = false;
+                    document.body.style.display = "block";
+                }
+            }
+        }
+    }
+</script>
 
 </html>
