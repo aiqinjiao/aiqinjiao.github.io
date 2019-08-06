@@ -19,7 +19,7 @@ header {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     text-align: center;
 }
 
@@ -38,12 +38,12 @@ header {
 }
 
 .moderators {
-    width: 20%;
+    max-width: 35px;
     height: 300px;
     float: right;
     position: absolute;
     top: 60px;
-    right: 30px;
+    right: 0;
 }
 
 .moderators ul {
@@ -72,8 +72,8 @@ header {
 
 .details {
     position: absolute;
-    top: 20px;
-    left: 50px;
+    bottom: 80px;
+    right: 35px;
     width: 200px;
     height: 200px;
 }
@@ -82,20 +82,17 @@ header {
     display: none;
     border: solid 1px #969696;
     background-color: #969696;
-    width: 200px;
     position: absolute;
     top: 50px;
+    right: 0;
     border-radius: 8px;
-}
-
-.myemail p {
-    margin-left: 20px;
 }
 
 .myweixin {
     display: none;
     position: absolute;
-    top: 55px
+    top: 55px;
+    right: 0;
 }
 
 .myweixin img {
@@ -107,6 +104,7 @@ header {
     display: none;
     position: absolute;
     top: 55px;
+    right: 0;
 }
 
 .myqq img {
