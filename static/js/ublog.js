@@ -8,7 +8,7 @@ $(document).ready(function() {
     var o = 0;
     var d = 0.5 * Math.PI;
     // 偏移弧度
-    var radian = 6 * Math.PI / 180;
+    var radian = 5 * Math.PI / 180;
     var oc = 0;
     var dc = radian;
 
@@ -34,14 +34,15 @@ $(document).ready(function() {
         o += radian;
         d += radian;
         r = 100;
-    }, 10)
+    }, 1)
 
     // 1s后显示首页
     setTimeout(function() {
         $('#load').css("display", 'none');
         $('#home').css("display", "block");
-    }, 500);
+    }, Math.random() * 1000);
 
+    // 右侧栏控制
     $('.email').mouseenter(function() {
         $('.myemail').css("display", "block");
     }).mouseleave(function() {
