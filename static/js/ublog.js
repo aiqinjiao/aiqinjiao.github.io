@@ -1,16 +1,17 @@
+var r = 100;
+var f = "#FDFDFD";
+var o = 0;
+var d = 0.5 * Math.PI;
+// 偏移弧度
+var radian = 5 * Math.PI / 180;
+var oc = 0;
+var dc = radian;
+// banner图片编号
+var qixi_n = 0;
+
 $(document).ready(function() {
 
     $('#load').height(screen.height);
-
-    // var ctx = $('#cv').getContext("2d");
-    var r = 100;
-    var f = "#FDFDFD";
-    var o = 0;
-    var d = 0.5 * Math.PI;
-    // 偏移弧度
-    var radian = 5 * Math.PI / 180;
-    var oc = 0;
-    var dc = radian;
 
     setInterval(function() {
         for (i = 0; i < 6; i++) {
@@ -66,6 +67,16 @@ $(document).ready(function() {
         copyText(".mail");
     })
 
+    // banner
+    $('.qixi').eq(qixi_n).show().siblings().hide();
+
+    setInterval(function() {
+        qixi_n++;
+        if (qixi_n == 4) {
+            qixi_n = 0;
+        }
+        $('.qixi').eq(qixi_n).fadeIn("slow").siblings().hide();
+    }, 3000)
 })
 
 
