@@ -7,10 +7,9 @@ var radian = 5 * Math.PI / 180;
 var oc = 0;
 var dc = radian;
 // banner图片编号
-var qixi_n = 0;
+var bn = 0;
 
 $(document).ready(function() {
-
     $('#load').height(screen.height);
 
     setInterval(function() {
@@ -68,17 +67,17 @@ $(document).ready(function() {
     })
 
     // banner
-    $('.qixi').eq(qixi_n).show().siblings().hide();
+    $('.scenery').eq(bn).show().siblings().hide();
 
     setInterval(function() {
-        qixi_n++;
-        if (qixi_n == 4) {
-            qixi_n = 0;
+        bn++;
+        if (bn == 4) {
+            bn = 0;
         }
-        $('.qixi').eq(qixi_n).fadeIn("slow").siblings().hide();
+        $('.scenery').eq(bn).fadeIn("slow").siblings().hide();
     }, 3000)
-})
 
+})
 
 // 画圆弧
 function dCircle(id, r, f, o, d) {
@@ -105,4 +104,27 @@ function copyText(elem) {
     a.select();
     document.execCommand("Copy");
     a.remove();
+}
+
+function loadXMLDoc() {
+    var xmlhttp;
+    var txt, x, i;
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else { // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            xmlDoc = xmlhttp.responseXML;
+            txt = "";
+            x = xmlDoc.getElementsByTagName("title");
+            for (i = 0; i < x.length; i++) {
+                txt = txt + x[i].childNodes[0].nodeValue + "<br />";
+            }
+            document.getElementById("myDiv").innerHTML = txt;
+        }
+    }
+    xmlhttp.open("GET", "ajax/books.xml", true);
+    xmlhttp.send();
 }
