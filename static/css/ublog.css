@@ -18,7 +18,7 @@ header {
     position: relative;
 }
 
-.container {
+.header-sec .container {
     width: 80%;
     text-align: center;
 }
@@ -116,5 +116,136 @@ header {
 
 .scenery img {
     width: 100%;
-    height: 240px;
+    height: 460px;
+    min-height: 240px;
+}
+
+#banner-sec {
+    text-align: center;
+}
+
+#banner-sec .container {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.menu-bar ul {
+    margin-top: 30px;
+}
+
+.menu-bar ul li {
+    display: inline-block;
+    margin: 0 10px;
+    color: #959595;
+}
+
+.menu-bar ul li a {
+    color: #959595;
+}
+
+.menu-bar ul li.active a {
+    color: #000000;
+}
+
+#banner-sec .container div h2 {
+    font-size: 56px;
+    line-height: 67px;
+    color: #959595;
+    word-spacing: -0.4px;
+    margin-top: 40px;
+}
+
+#banner-sec .container div span {
+    display: block;
+    width: 2px;
+    height: 80px;
+    background-color: #959595;
+    margin: 10px auto 20px;
+}
+
+.skills-sec .container {
+    /* width: 60%; */
+    margin: 20px 10%;
+}
+
+.skills-sec .container h2 {
+    text-align: left;
+    /* padding-left: 10%; */
+    font-size: 56px;
+}
+
+.skills-sec .container h5 {
+    text-align: left;
+    /* padding-left: 10%; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: #959595;
+    margin-bottom: 30px;
+    margin-right: 20%;
+}
+
+.skills-sec .container ul {
+    width: 340px;
+    margin: 0 auto;
+    color: #959595;
+}
+
+.skills-sec .container ul li {
+    margin-bottom: 20px;
+}
+
+.barfiller {
+    width: 100%;
+    height: 12px;
+    margin-top: 10px
+}
+
+.fill {
+    display: block;
+    height: 12px;
+}
+
+.skills-set li:nth-child(1) .barfiller {
+    border: 1px solid #0f5daa;
+}
+
+.skills-set li:nth-child(1) .barfiller .fill {
+    background-color: #0f5daa;
+    width: 85%;
+}
+
+.skills-set li:nth-child(2) .barfiller {
+    border: 1px solid #02592e;
+}
+
+.skills-set li:nth-child(2) .barfiller .fill {
+    background-color: #02592e;
+    width: 70%;
+}
+
+.skills-set li:nth-child(3) .barfiller {
+    border: 1px solid #e07702;
+}
+
+.skills-set li:nth-child(3) .barfiller .fill {
+    background-color: #e07702;
+    width: 90%;
+}
+
+.skills-set li:nth-child(4) .barfiller {
+    border: 1px solid #f5e200;
+}
+
+.skills-set li:nth-child(4) .barfiller .fill {
+    background-color: #f5e200;
+    width: 95%;
+}
+
+.skills-set li:nth-child(5) .barfiller {
+    border: 1px solid #dd59ad;
+}
+
+.skills-set li:nth-child(5) .barfiller .fill {
+    background-color: #dd59ad;
+    width: 85%;
 }
