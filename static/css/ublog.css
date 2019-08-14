@@ -13,7 +13,7 @@
 
 header {
     background-color: #000000;
-    height: 240px;
+    /* height: 240px; */
     padding: 60px 0;
     position: relative;
 }
@@ -21,10 +21,6 @@ header {
 .header-sec .container {
     width: 80%;
     text-align: center;
-}
-
-.motto {
-    height: 60px;
 }
 
 .motto p {
@@ -163,21 +159,30 @@ header {
     margin: 10px auto 20px;
 }
 
-.skills-sec .container {
+.skills-sec {
+    background-color: #EDEEF0;
+}
+
+.skills-sec .container,
+.services-sec .container {
     /* width: 60%; */
     margin: 20px 10%;
 }
 
-.skills-sec .container h2 {
+.skills-sec .container h2,
+.services-sec .container h2 {
     text-align: left;
     /* padding-left: 10%; */
     font-size: 56px;
+    font-family: monospace;
+    padding-top: 20px;
 }
 
-.skills-sec .container h5 {
+.skills-sec .container h5,
+.services-sec .container h5 {
     text-align: left;
     /* padding-left: 10%; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: monospace;
     font-size: 20px;
     color: #959595;
     margin-bottom: 30px;
@@ -188,6 +193,7 @@ header {
     width: 340px;
     margin: 0 auto;
     color: #959595;
+    padding-bottom: 30px;
 }
 
 .skills-sec .container ul li {
@@ -248,4 +254,36 @@ header {
 .skills-set li:nth-child(5) .barfiller .fill {
     background-color: #dd59ad;
     width: 85%;
+}
+
+.services-sec .rowlist::after {
+    content: "";
+    display: block;
+    clear: both;
+    /* overflow: hidden; */
+}
+
+.services-sec .skill-item {
+    float: left;
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.services-sec .skill-item h6 {
+    width: 80%;
+    margin-left: 50px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #AAAAAA;
+    font-family: monospace;
+}
+
+.services-sec .skill-item h3 {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    font-size: 34px;
+    font-weight: 400;
+    font-family: monospace;
 }

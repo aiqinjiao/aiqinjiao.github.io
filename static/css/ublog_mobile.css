@@ -13,8 +13,8 @@
 
 header {
     background-color: #000000;
-    height: 240px;
-    padding: 60px 0;
+    /* height: 240px; */
+    padding-bottom: 30px;
     position: relative;
 }
 
@@ -23,27 +23,26 @@ header {
     text-align: center;
 }
 
-.motto {
-    height: 60px;
-}
-
 .motto p {
     color: #ffffff;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-left: 5%;
 }
 
 .motto strong {
     color: #ffffff;
+    padding-left: 5%;
 }
 
 .moderators {
-    max-width: 35px;
+    /* max-width: 35px; */
     height: 300px;
     float: right;
     position: absolute;
     top: 60px;
     right: 0;
+    /* padding-right: 5%; */
 }
 
 .moderators ul {
@@ -73,7 +72,7 @@ header {
 .details {
     position: absolute;
     bottom: 80px;
-    right: 35px;
+    right: 50px;
     width: 200px;
     height: 200px;
 }
@@ -160,21 +159,30 @@ header {
     margin: 10px auto 20px;
 }
 
-.skills-sec .container {
+.skills-sec {
+    background-color: #EDEEF0;
+}
+
+.skills-sec .container,
+.services-sec .container {
     width: 100%;
     /* margin: 20px 10%; */
 }
 
-.skills-sec .container h2 {
+.skills-sec .container h2,
+.services-sec .container h2 {
     text-align: left;
     padding-left: 10px;
     font-size: 20px;
+    padding-top: 20px;
+    font-family: monospace;
 }
 
-.skills-sec .container h5 {
+.skills-sec .container h5,
+.services-sec .container h5 {
     text-align: left;
     padding-left: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: monospace;
     font-size: 10px;
     color: #959595;
     margin-bottom: 30px;
@@ -185,6 +193,7 @@ header {
     width: 70%;
     margin: 0 auto;
     color: #959595;
+    padding-bottom: 30px;
 }
 
 .skills-sec .container ul li {
@@ -249,4 +258,39 @@ header {
 .skills-set li:nth-child(5) .barfiller .fill {
     background-color: #dd59ad;
     width: 85%;
+}
+
+
+/* .services-sec .rowlist::after {
+    content: "";
+    display: block;
+    clear: both;
+    /* overflow: hidden; 
+} */
+
+.services-sec .skill-item {
+    /* float: left; */
+    /* width: 50%; */
+    margin-bottom: 20px;
+    /* position: relative; */
+}
+
+.services-sec .skill-item h3 {
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 50px; */
+    font-size: 18px;
+    font-weight: 200;
+    font-family: monospace;
+}
+
+.services-sec .skill-item h6 {
+    /* width: 80%; */
+    /* margin-left: 50px; */
+    font-size: 10px;
+    line-height: 18px;
+    color: #AAAAAA;
+    font-family: monospace;
+    text-align: left;
+    margin-left: 5px;
 }
