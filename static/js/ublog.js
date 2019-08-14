@@ -77,6 +77,12 @@ $(document).ready(function() {
         $('.scenery').eq(bn).fadeIn("slow").siblings().hide();
     }, 3000)
 
+    $('.menu-bar ul li').mouseenter(function() {
+        $(this).addClass("active");
+    }).mouseleave(function() {
+        $(this).removeClass();
+    })
+
 })
 
 // 画圆弧
