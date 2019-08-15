@@ -1,3 +1,12 @@
+.mainpage {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.mainpage a {
+    background-color: #7CDCFE;
+}
+
 #share h1 {
     margin: 30px 0 0 50px;
 }
