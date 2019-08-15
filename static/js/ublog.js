@@ -69,14 +69,17 @@ $(document).ready(function() {
     // banner
     $('.scenery').eq(bn).show().siblings().hide();
 
-    setInterval(function() {
-        bn++;
-        if (bn == 4) {
-            bn = 0;
-        }
-        $('.scenery').eq(bn).fadeIn("slow").siblings().hide();
-    }, 3000)
+    setTimeout(function() {
+        setInterval(function() {
+            bn++;
+            if (bn == 4) {
+                bn = 0;
+            }
+            $('.scenery').eq(bn).fadeIn("slow").siblings().hide();
+        }, 3000)
+    }, 5000)
 
+    // 首页导航样式
     $('.menu-bar ul li').mouseenter(function() {
         $(this).addClass("active");
     }).mouseleave(function() {

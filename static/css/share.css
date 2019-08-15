@@ -1,3 +1,47 @@
+#share h1 {
+    margin: 30px 0 0 50px;
+}
+
+#share ul {
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 80%;
+    overflow: hidden;
+}
+
+#share li {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    background-color: #E6F1FC;
+}
+
+#course {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#course li {
+    margin-bottom: 10px;
+}
+
+.bkhome {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.bkhome a {
+    background-color: #7CDCFE;
+}
+
+.active {
+    background-color: #666666;
+}
+
+.active a {
+    color: #ffffff;
+}
+
 #maincontent {
     width: 85%;
     margin-bottom: 50px;
@@ -47,7 +91,7 @@
     margin-top: 15px;
 }
 
-pre {
+#maincontent pre {
     margin-top: 15px;
     padding: 20px;
     border: 1px dotted #778855;
@@ -56,42 +100,19 @@ pre {
     font-family: cochin;
 }
 
-#share ul {
-    margin-top: 30px;
-    margin-left: 50px;
-    width: 40%;
+#maincontent ul.skip {
     overflow: hidden;
 }
 
-#share li {
+#maincontent .skip li {
+    list-style: none;
+    width: 15%;
+    height: 25px;
     float: left;
-    margin-right: 30px;
-    margin-bottom: 20px;
-    background-color: #E6F1FC;
+    border: 1px solid #969696;
 }
 
-#course {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-#course li {
-    margin-bottom: 10px;
-}
-
-.bkhome {
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.bkhome a {
-    background-color: #7CDCFE;
-}
-
-.active {
-    background-color: #666666;
-}
-
-.active a {
-    color: #ffffff;
+#maincontent .skip a:nth-child(2) li {
+    float: right;
+    margin-right: 20px;
 }
