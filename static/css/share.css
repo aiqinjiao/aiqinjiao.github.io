@@ -1,8 +1,59 @@
-h1 {
+#maincontent {
+    width: 85%;
+    margin-bottom: 50px;
+}
+
+#maincontent div {
+    margin-left: 50px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+#maincontent h1 {
     font-size: 36px;
     font-weight: 400;
     margin-top: 30px;
     margin-left: 50px;
+}
+
+#maincontent h2 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #3f3f3f
+}
+
+#maincontent h3 {
+    margin: 25px 0 0 0;
+    font-size: 16px;
+}
+
+#maincontent h4 {
+    margin: 25px 0 0 0;
+}
+
+#maincontent p {
+    margin: 20px 0 0 0;
+    line-height: 159%;
+}
+
+#maincontent li {
+    margin-top: 8px;
+    margin-left: 20px;
+    list-style: unset;
+}
+
+#maincontent img {
+    margin-top: 15px;
+}
+
+pre {
+    margin-top: 15px;
+    padding: 20px;
+    border: 1px dotted #778855;
+    background-color: #f5f5f5;
+    line-height: 1.4;
+    font-family: cochin;
 }
 
 #share ul {
@@ -17,4 +68,30 @@ h1 {
     margin-right: 30px;
     margin-bottom: 20px;
     background-color: #E6F1FC;
+}
+
+#course {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#course li {
+    margin-bottom: 10px;
+}
+
+.bkhome {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.bkhome a {
+    background-color: #7CDCFE;
+}
+
+.active {
+    background-color: #666666;
+}
+
+.active a {
+    color: #ffffff;
 }
