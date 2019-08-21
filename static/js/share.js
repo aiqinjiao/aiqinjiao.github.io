@@ -1,6 +1,6 @@
-var course_frame = window.parent.course_frame;
-var uAction = course_frame.document.getElementsByClassName('active');
-var uNext = document.getElementsByClassName('next');
+// var course_frame = window.parent.course_frame;
+// var uAction = course_frame.document.getElementsByClassName('active');
+// var uNext = document.getElementsByClassName('next');
 
 
 $(document).ready(function() {
@@ -15,6 +15,6 @@ $(document).ready(function() {
     // })
 })
 
-uNext.onclick = function() {
-    uAction.removeAttribute('acitve');
-}
+// uNext.onclick = function() {
+//     uAction.removeAttribute('acitve');
+// }
