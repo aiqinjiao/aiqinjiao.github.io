@@ -76,7 +76,7 @@ window.onload = function() {
             if (i % 3 == 0) {
                 clock.innerHTML += "<div class='clock-num em_num'>" + i + "</div>";
             } else {
-                clock.innerHTML += "<div class='clock-num'>" + i + "<div>";
+                clock.innerHTML += "<div class='clock-num'>" + i + "</div>";
             }
 
         }
