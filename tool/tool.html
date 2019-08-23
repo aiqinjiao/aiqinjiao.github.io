@@ -12,6 +12,29 @@
     <div>
         <iframe src="./timekeeper/timekeeper.html" frameborder="0" width="450" height="500"></iframe>
     </div>
+    <a href="../index.html">返回主页</a>
+    <p>看看文档</p>
+    <ul>
+        <li><a href="https://www.w3school.com.cn/index.html">w3school</a></li>
+        <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn">MDN Web Doc</a></li>
+        <li><a href="https://wangdoc.com/javascript/">JavaScript 教程</a></li>
+        <li><a href="http://es6.ruanyifeng.com/">ECMAScript 6 入门</a></li>
+        <li><a href="https://v4.bootcss.com/docs/4.0/getting-started/introduction/">Bootstrap</a></li>
+        <li><a href="https://www.jianshu.com/p/f2cf62c66493">前端模块化演化阶段</a></li>
+        <li><a href="https://github.com/ruanyf/jstraining/blob/master/docs/history.md">前端开发的历史和趋势</a></li>
+        <li><a href="https://nodejs.org/en/docs/">NodeJS</a></li>
+        <li><a href="https://cn.vuejs.org/v2/guide/">VUE官方文档</a></li>
+        <li><a href="https://www.webpackjs.com/concepts/">WebPack</a></li>
+        <li><a href="https://www.miaoroom.com/code/note/ued-learningpath.html">「前端进阶」2018/2019 史上最全的前端学习路线</a></li>
+    </ul>
 </body>
+<script>
+    window.onload = function() {
+        var arr = document.getElementsByTagName("a");
+        for (var i = 0; i < arr.length; i++) {
+            arr[i].setAttribute("target", "_blank");
+        }
+    }
+</script>
 
 </html>
