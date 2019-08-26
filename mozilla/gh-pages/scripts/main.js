@@ -36,3 +36,30 @@ if (!storedName) {
 
 let myButton = document.querySelector('button');
 myButton.onclick = setUsername;
+
+
+let list = document.createElement('ul');
+let html = document.querySelector('html');
+let info = document.createElement('p');
+let btn = document.createElement('button');
+
+info.textContent = 'Below is a dynamic list.'
+btn.textContent = '添加';
+
+
+document.body.appendChild(info);
+document.body.appendChild(btn);
+document.body.appendChild(list);
+
+
+btn.onclick = function() {
+    let listItem = document.createElement('li');
+    let listContent = prompt('What content do you want the list item to have?');
+    listItem.textContent = listContent;
+    list.appendChild(listItem);
+
+    listItem.onclick = function() {
+        let listContent = prompt('Enter new content for you list item.')
+        this.textContent = listContent;
+    }
+}
