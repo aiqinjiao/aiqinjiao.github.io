@@ -76,7 +76,7 @@
                         <li><a href="./share/share.html">Share</a></li>
                         <li><a href="./tool/tool.html">Tool</a></li>
                         <li><a href="mozilla/gh-pages/index.html">Mozilla</a></li>
-                        <li><a href="javascript:void(0)">blog</a></li>
+                        <li><a href="mozilla/bird-watching/index.html">Bird</a></li>
                         <li><a href="javascript:void(0)">contact</a></li>
                     </ul>
                 </div>
@@ -153,34 +153,34 @@
             </div>
         </section>
     </div>
+    <script src="static/js/jquery-3.4.1.min.js"></script>
+    <script src="static/js/ublog.js"></script>
+    <script>
+        var title;
 
-</body>
-<script src="static/js/jquery-3.4.1.min.js"></script>
-<script src="static/js/ublog.js"></script>
-<script>
-    var title;
+        if (/mobile|phone|android|pad/.test(navigator.userAgent.toLowerCase())) {
+            title = 'mobile';
+        } else {
+            title = 'pc';
+        }
+        setStyle(title);
 
-    if (/mobile|phone|android|pad/.test(navigator.userAgent.toLowerCase())) {
-        title = 'mobile';
-    } else {
-        title = 'pc';
-    }
-    setStyle(title);
-
-    // 区分PC、mobile 加载不同的css
-    function setStyle() {
-        var i, links;
-        links = document.getElementsByTagName("link");
-        for (i = 0; links[i]; i++) {
-            if (links[i].getAttribute("rel").indexOf("style") != -1 && links[i].getAttribute("title")) {
-                links[i].disabled = true;
-                if (links[i].getAttribute("title").indexOf(title) != -1) {
-                    links[i].disabled = false;
-                    document.body.style.display = "block";
+        // 区分PC、mobile 加载不同的css
+        function setStyle() {
+            var i, links;
+            links = document.getElementsByTagName("link");
+            for (i = 0; links[i]; i++) {
+                if (links[i].getAttribute("rel").indexOf("style") != -1 && links[i].getAttribute("title")) {
+                    links[i].disabled = true;
+                    if (links[i].getAttribute("title").indexOf(title) != -1) {
+                        links[i].disabled = false;
+                        document.body.style.display = "block";
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
+</body>
+
 
 </html>
