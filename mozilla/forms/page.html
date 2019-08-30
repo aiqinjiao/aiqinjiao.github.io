@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Payment form example</title>
+    <link href="payment-form.css" rel="stylesheet">
+</head>
+
+<body>
+    <form method="POST">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                      <input type="radio" id="title_1" name="title" value="M." >
+                      Mister
+                    </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                      <input type="radio" id="title_2" name="title" value="Ms.">
+                      Miss
+                    </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="name">
+                <span>Name: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+                <input type="text" id="name" name="username">
+            </p>
+            <p>
+                <label for="mail">
+                <span>E-mail: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+                <input type="email" id="mail" name="usermail">
+            </p>
+            <p>
+                <label for="pwd">
+                <span>Password: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+                <input type="password" id="pwd" name="password">
+            </p>
+        </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+                <label for="card">
+                <span>Card type:</span>
+              </label>
+                <select id="card" name="usercard">
+                <option value="visa">Visa</option>
+                <option value="mc">Mastercard</option>
+                <option value="amex">American Express</option>
+              </select>
+            </p>
+            <p>
+                <label for="number">
+                <span>Card number:</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+                <input type="number" id="number" name="cardnumber">
+            </p>
+            <p>
+                <label for="date">
+                <span>Expiration date:</span>
+                <strong><abbr title="required">*</abbr></strong>
+                <em>formatted as mm/yy</em>
+              </label>
+                <input type="date" id="date" name="expiration">
+            </p>
+        </section>
+        <section>
+            <p> <button type="submit">Validate the payment</button> </p>
+        </section>
+        <select id="groups" name="groups" multiple>
+                <optgroup label="fruits">
+                  <option>Banana</option>
+                  <option selected>Cherry</option>
+                  <option>Lemon</option>
+                </optgroup>
+                <optgroup label="vegetables">
+                  <option>Carrot</option>
+                  <option>Eggplant</option>
+                  <option>Potato</option>
+                </optgroup>
+              </select>
+        <label for="myFruit">What's your favorite fruit?</label>
+        <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+        <datalist id="mySuggestion">
+  <option>Apple</option>
+  <option>Banana</option>
+  <option>Blackberry</option>
+  <option>Blueberry</option>
+  <option>Lemon</option>
+  <option>Lychee</option>
+  <option>Peach</option>
+  <option>Pear</option>
+</datalist>
+        <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+        <input type="text" id="myFruit" name="fruit" list="fruitList">
+
+        <datalist id="fruitList">
+  <label for="suggestion">or pick a fruit</label>
+  <select id="suggestion" name="altFruit">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Blackberry</option>
+    <option>Blueberry</option>
+    <option>Lemon</option>
+    <option>Lychee</option>
+    <option>Peach</option>
+    <option>Pear</option>
+  </select>
+</datalist>
+        <label for="carrots">carrots</label>
+        <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+        <fieldset>
+            <legend>What is your favorite meal?</legend>
+            <ul>
+                <li>
+                    <label for="soup">Soup</label>
+                    <input type="radio" checked id="soup" name="meal" value="soup">
+                </li>
+                <li>
+                    <label for="curry">Curry</label>
+                    <input type="radio" id="curry" name="meal" value="curry">
+                </li>
+                <li>
+                    <label for="pizza">Pizza</label>
+                    <input type="radio" id="pizza" name="meal" value="pizza">
+                </li>
+            </ul>
+        </fieldset>
+        <label for="beans">How many beans can you eat?</label>
+        <input type="range" name="beans" id="beans" min="0" max="500" step="10">
+        <span class="beancount"></span>
+        <input type="file" name="file" id="file" accept="image/*" multiple>
+        <meter min="0" max="100" value="100" low="33" high="66" optimum="50">100</meter>
+    </form>
+    <form action="http://foo.com" method="get">
+        <div>
+            <label for="say">What greeting do you want to say?</label>
+            <input name="say" id="say" value="Hi">
+        </div>
+        <div>
+            <label for="to">Who do you want to say it to?</label>
+            <input name="to" id="to" value="Mom">
+        </div>
+        <div>
+            <button>Send my greetings</button>
+        </div>
+    </form>
+    <form action="http://foo.com" method="post">
+        <div>
+            <label for="say">What greeting do you want to say?</label>
+            <input name="say" id="say" value="Hi">
+        </div>
+        <div>
+            <label for="to">Who do you want to say it to?</label>
+            <input name="to" id="to" value="Mom">
+        </div>
+        <div>
+            <button>Send my greetings</button>
+        </div>
+    </form>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <label for="file">Choose a file</label>
+            <input type="file" id="file" name="myFile">
+        </div>
+        <div>
+            <button>Send the file</button>
+        </div>
+    </form>
+    <script>
+        var beans = document.querySelector('#beans');
+        var count = document.querySelector('.beancount');
+
+        count.textContent = beans.value;
+
+        beans.oninput = function() {
+            count.textContent = beans.value;
+        }
+    </script>
+</body>
+
+</html>

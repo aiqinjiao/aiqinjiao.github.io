@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form {
+            /* 居中表单 */
+            margin: 0 auto;
+            width: 400px;
+            /* 显示表单的轮廓 */
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        
+        form div+div {
+            margin-top: 1em;
+        }
+        
+        label {
+            /* 确保所有label大小相同并正确对齐 */
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+        
+        input,
+        textarea {
+            /* 确保所有文本输入框字体相同
+     textarea默认是等宽字体 */
+            font: 1em sans-serif;
+            /* 使所有文本输入框大小相同 */
+            width: 300px;
+            box-sizing: border-box;
+            /* 调整文本输入框的边框样式 */
+            border: 1px solid #999;
+        }
+        
+        input:focus,
+        textarea:focus {
+            /* 给激活的元素一点高亮效果 */
+            border-color: #000;
+        }
+        
+        textarea {
+            /* 使多行文本输入框和它们的label正确对齐 */
+            vertical-align: top;
+            /* 给文本留下足够的空间 */
+            height: 5em;
+        }
+        
+        .button {
+            /* 把按钮放到和文本输入框一样的位置 */
+            padding-left: 90px;
+            /* 和label的大小一样 */
+        }
+        
+        button {
+            /* 这个外边距的大小与label和文本输入框之间的间距差不多 */
+            margin-left: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="page.html" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="user_name" id="name" value="your name">
+        </div>
+        <div>
+            <label for="mail">E-mail:</label>
+            <input type="email" name="user_email" id="mail">
+        </div>
+        <div>
+            <label for="message">message:</label>
+            <textarea name="uesr_message" id="message" cols="30" rows="10">your message</textarea>
+        </div>
+        <div class="button">
+            <button type="submit">Send your message</button>
+        </div>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Fruit juice size</legend>
+            <p>
+                <input type="radio" name="size" id="size_1" value="small">
+                <label for="size_1">Small</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size_2" value="medium">
+                <label for="size_2">Medium</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size_3" value="large">
+                <label for="size_3">Large</label>
+            </p>
+        </fieldset>
+    </form>
+    <form>
+        <p>
+            <label for="taste_1">I like cherry</label>
+            <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+        </p>
+        <p>
+            <label for="taste_2">I like banana</label>
+            <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+        </p>
+    </form>
+    <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+
+    <div>
+        <label for="username">Name: <abbr title="required">*</abbr></label>
+        <input id="username" type="text" name="username">
+    </div>
+</body>
+
+</html>
