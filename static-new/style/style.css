@@ -21,6 +21,10 @@ body {
     margin: 0 auto;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 4rem;
     background-color: #539EBE;
