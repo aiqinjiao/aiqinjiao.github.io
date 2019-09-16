@@ -1,5 +1,5 @@
 let projects = [{
-        name: 'guess game',
+        name: 'guessgame',
         url: 'project/number-guessing-game.html'
     },
     {
