@@ -1,5 +1,9 @@
 let projects = [{
-        name: 'guessgame',
+        name: 'sillyStory',
+        url: 'project/silly-story.html'
+    },
+    {
+        name: 'guessGame',
         url: 'project/number-guessing-game.html'
     },
     {
@@ -20,6 +24,7 @@ let proCount = projects.length;
 
 const proUl = document.querySelector('.project ul');
 
+// 创建项目列表
 for (let i = 0; i <= proCount; i++) {
     let proUlLi = document.createElement('li');
     proUlLi.innerHTML = '<a href="' + projects[i]["url"] + '" target="_blank">' + projects[i]['name'] + '</a>';
