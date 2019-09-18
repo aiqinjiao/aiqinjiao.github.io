@@ -1,4 +1,12 @@
 let projects = [{
+        name: 'telephon',
+        url: 'project/telephone.html'
+    },
+    {
+        name: 'calendar',
+        url: 'project/calendar.html'
+    },
+    {
         name: 'sillyStory',
         url: 'project/silly-story.html'
     },

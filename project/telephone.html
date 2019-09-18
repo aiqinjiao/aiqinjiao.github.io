@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="contact-name"></p>
+    <label for="name">Search by contact name:</label>
+    <input type="text" id="name">
+    <button>Search</button>
+
+    <p class="search-result"></p>
+
+    <script>
+        const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+        const input = document.querySelector('input'),
+            button = document.querySelector('button'),
+            searchResult = document.querySelector('.search-result');
+
+        const contactName = document.querySelector('.contact-name');
+        let info = 'Contact name: ';
+        for (let i = 0; i < contacts.length; i++) {
+            if (i === contacts.length - 2) {
+                info += contacts[i].split(':')[0] + ' and ';
+            } else if (i === contacts.length - 1) {
+                info += contacts[i].split(':')[0] + '.'
+            } else {
+                info += contacts[i].split(':')[0] + ', ';
+            }
+        }
+        contactName.textContent = info;
+
+        button.addEventListener('click', function() {
+            let searchName = input.value.toLowerCase();
+            for (let i = 0; i < contacts.length; i++) {
+                let splitContact = contacts[i].split(':');
+                if (splitContact[0].toLowerCase() === searchName) {
+                    searchResult.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+                    break;
+                } else {
+                    searchResult.textContent = 'Contact not found.';
+                }
+            }
+            input.value = '';
+            input.focus();
+        });
+    </script>
+</body>
+
+</html>

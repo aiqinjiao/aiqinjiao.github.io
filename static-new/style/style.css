@@ -74,11 +74,14 @@ ul {
 
 li {
     display: inline-block;
+    /* float: left; */
     width: calc(1/7*100%);
+    /* width: 24%; */
     min-width: 120px;
     height: 3rem;
     background-color: #BDF7E8;
     margin: 0 calc(1/21*100%) 2rem;
+    /* border: 5px solid white; */
     list-style: none;
     font-size: 2.5rem;
     text-align: center;
