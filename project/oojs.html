@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    <script>
+        function Person(first, last, age, gender, interests) {
+            this.name = {
+                first: first,
+                last: last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+            this.bio = function() {
+                let call;
+                let likes = ' likes ';
+                // 判断性别
+                (gender === 'male') ? call = 'He': call = 'She';
+                // 拼接兴趣
+                for (let i = 0; i < interests.length; i++) {
+                    if (i === interests.length - 1) {
+                        likes += this.interests[i] + '.';
+                    } else if (i === interests.length - 2) {
+                        likes += this.interests[i] + ' and ';
+                    } else {
+                        likes += this.interests[i] + ', ';
+                    }
+                }
+                alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ' +
+                    call + likes);
+            };
+
+            this.greeting = function() {
+                alert('Hi! I\'m ' + this.name.first + '.');
+            };
+        }
+        // 类对象添加方法
+        Person.prototype.farewell = function() {
+            alert(this.name.first + ' has left the building. Bye for now!');
+        };
+
+        const person1 = new Person('Bob', 'Smith', 28, 'male', ['music', 'skiing']);
+        const person2 = new Person('lily', 'Smith', 25, 'female', ['music', 'skiing', '功夫']);
+        const person3 = new Person('Tom', 'Smith', 21, 'male', ['功夫']);
+    </script>
+</body>
+
+</html>

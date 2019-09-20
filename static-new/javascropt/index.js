@@ -1,4 +1,8 @@
 let projects = [{
+        name: 'gallery',
+        url: 'project/gallery-start/gallery-start/index.html'
+    },
+    {
         name: 'telephon',
         url: 'project/telephone.html'
     },
