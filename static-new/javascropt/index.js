@@ -1,4 +1,4 @@
-let projects = [{
+let projects = [{ name: 'balls', url: 'project/bouncing-balls/index.html' }, {
         name: 'gallery',
         url: 'project/gallery-start/gallery-start/index.html'
     },

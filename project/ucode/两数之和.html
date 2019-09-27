@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="arr">请输入多个数字，已逗号分隔：</label>
+    <input type="text" id="arr"><br>
+    <label for="sum">请输入一个求和数：</label>
+    <input type="text" id="sum">
+    <p></p>
+    <script>
+        // 找出数据里面任意2个数之和等于给定的值
+        const reg = /d+/
+        let arr = [1, 2, 3, 4, 5];
+        let sum = 6;
+        let a = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                let s = arr[i] + arr[j];
+                if (s === sum) {
+                    a.push([i, j]);
+                }
+            }
+        }
+        console.log(a);
+    </script>
+</body>
+
+</html>
