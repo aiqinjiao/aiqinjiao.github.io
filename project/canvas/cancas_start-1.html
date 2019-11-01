@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="myCanvas">
+        <p>当浏览器不支持画布，将显示替换内容。</p>
+    </canvas>
+    <script>
+        var canvas = document.querySelector('.myCanvas');
+        var width = canvas.width = window.innerWidth;
+        var height = canvas.height = window.innerHeight;
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb(0, 0, 0)';
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.translate(width / 2, height / 2);
+
+        function degToRad(degrees) {
+            return degrees * Math.PI / 180;
+        };
+
+        // 一个rand()函数，它返回给定下界和上界之间的一个随机数
+        function rand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // var lenght = 230;
+        var lenght = rand(200, 250);
+        var moveOffset = 20;
+
+        for (var i = 0; i < lenght; i++) {
+            ctx.fillStyle = 'rgba(' + (255 - lenght) + ', 0, ' + (255 - lenght) + ', 0.9)';
+            ctx.beginPath();
+            ctx.moveTo(moveOffset, moveOffset);
+            ctx.lineTo(moveOffset + lenght, moveOffset);
+            var triHeight = lenght / 2 * Math.tan(degToRad(60));
+            ctx.lineTo(moveOffset + lenght / 2, triHeight);
+            ctx.lineTo(moveOffset, moveOffset);
+            ctx.fill();
+
+            lenght--;
+            // moveOffset += 0.7;
+            moveOffset += rand(0.1, 1);
+            // ctx.rotate(degToRad(5));
+            degrees = rand(1, 10);
+            ctx.rotate(degToRad(degrees));
+
+            console.log('lenght: ' + lenght + '; moveOffset: ' + moveOffset + '; degress: ' + degrees)
+        }
+    </script>
+</body>
+
+</html>

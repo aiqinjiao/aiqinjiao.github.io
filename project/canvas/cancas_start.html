@@ -22,6 +22,82 @@
         var canvas = document.querySelector('.myCanvas');
         var width = canvas.width = window.innerWidth;
         var height = canvas.height = window.innerHeight;
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb(0, 0, 0)';
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.fillStyle = 'rgb(255, 0, 0)';
+        ctx.fillRect(50, 50, 100, 50);
+
+        ctx.fillStyle = 'rgb(0, 255, 0)';
+        ctx.fillRect(75, 75, 100, 250);
+
+        ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
+        ctx.fillRect(25, 75, 175, 50);
+
+        ctx.strokeStyle = 'rgb(255, 255, 255)';
+        ctx.lineWidth = 5;
+        ctx.strokeRect(25, 25, 150, 250);
+
+        ctx.fillStyle = 'rgb(100, 100, 100)';
+        ctx.beginPath();
+        ctx.moveTo(50, 50);
+        ctx.lineTo(150, 50);
+        var triangleHeight = 50 * Math.tan(degreeToRadin(60));
+        ctx.lineTo(100, 50 + triangleHeight);
+        ctx.lineTo(50, 50);
+        ctx.fill();
+
+        ctx.strokeStyle = 'rgb(0, 0, 255)';
+        ctx.beginPath();
+        ctx.arc(200, 150, 50, degreeToRadin(0), degreeToRadin(360), false);
+        ctx.stroke();
+
+        ctx.fillStyle = 'yellow';
+        ctx.beginPath();
+        ctx.arc(400, 200, 50, degreeToRadin(-45), degreeToRadin(45), true);
+        ctx.lineTo(400, 200);
+        ctx.fill();
+
+        ctx.strokeStyle = 'purple';
+        ctx.beginPath();
+        ctx.arc(800, 200, 50, degreeToRadin(180), degreeToRadin(360), false);
+        ctx.arc(900, 200, 50, degreeToRadin(180), degreeToRadin(360), true);
+        ctx.stroke();
+
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 1;
+        ctx.font = '36px arial';
+        ctx.strokeText('Canvas text', 50, 400);
+
+        ctx.fillStyle = 'red';
+        ctx.font = '48px georgia';
+        ctx.fillText('Canvas text', 50, 450);
+
+        var image = new Image();
+        var image1 = new Image();
+        image.src = 'firefox.png';
+        image1.src = 'firefox.png';
+
+        image.onload = function() {
+            ctx.drawImage(image, 50, 500);
+            ctx.drawImage(image1, 20, 20, 200, 170, 300, 500, 250, 100);
+        }
+
+        ctx.rotate(degreeToRadin(30));
+
+
+        ctx.fillStyle = 'red';
+        ctx.font = '48px georgia';
+        ctx.fillText('Canvas text11111111111111', 250, 450);
+
+        // ctx.rotate(degreeToRadin(30));
+
+        // 角度换算为弧度
+        function degreeToRadin(degrees) {
+            return degrees * Math.PI / 180;
+        }
     </script>
 </body>
 
