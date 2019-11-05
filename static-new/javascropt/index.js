@@ -1,4 +1,8 @@
 let projects = [{
+        name: 'notes',
+        url: 'project/notes/index.html'
+    },
+    {
         name: 'balls',
         url: 'project/bouncing-balls/index.html'
     },
