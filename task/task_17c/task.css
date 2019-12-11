@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+#aqi-chart-wrap {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+}
+
+.aqi-list {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    bottom: 0;
+}
+
+.aqi-list:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+}
+
+.aqi-info {
+    position: absolute;
+    display: none;
+    height: 40px;
+    width: 200px;
+    line-height: 20px;
+    padding: 10px;
+    font-size: 13px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    z-index: 5;
+}
+
+.show {
+    display: block;
+}
