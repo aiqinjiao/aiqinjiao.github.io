@@ -25,7 +25,7 @@ function getDateStr(dat) {
 function randomBuildData(seed) {
     var returnData = {};
     var dat = new Date("2016-01-01");
-    var datStr = ''
+    var datStr = '';
     for (var i = 1; i < 92; i++) {
         datStr = getDateStr(dat);
         returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -72,17 +72,26 @@ function renderChart() {
     var chart = document.getElementById("aqi-chart-wrap");
     var html = '';
     var unit = pageState.nowGraTime === "day" ? "日" : pageState.nowGraTime === "week" ? "周" : "月";
-    html += '<div class="title">' + pageState.nowSelectCity + "市 第1" + unit + "~" + "第" + (chartData[pageState.nowGraTime][pageState.nowSelectCity].length) + unit + ' 平均空气质量报告</div>';
+    html += '<div class="title">' + pageState.nowSelectCity + "市 第1" + unit + "~" +
+        "第" + (chartData[pageState.nowGraTime][pageState.nowSelectCity].length) + unit +
+        ' 平均空气质量报告</div>';
     var selectedData = chartData[pageState.nowGraTime][pageState.nowSelectCity];
     var temWidth = (90) / chartData[pageState.nowGraTime][pageState.nowSelectCity].length;
     var temSpace = (10) / (chartData[pageState.nowGraTime][pageState.nowSelectCity].length - 1);
     var nowLeft = 0;
     for (var key in selectedData) {
         if (key !== "length") {
-            var temHeight = Math.floor(pageState.nowGraTime === "day" ? selectedData[key] : selectedData[key].Sum / selectedData[key].DayNum) / 2;
-            html += "<div class='aqi-list' style='left:" + nowLeft + "%;height:" + temHeight + "px;width:" + temWidth + "%;background-color:" + colors[Math.floor(Math.random() * 11)] + "'></div>";
+            var temHeight = Math.floor(pageState.nowGraTime === "day" ? selectedData[key] :
+                selectedData[key].Sum / selectedData[key].DayNum) / 2;
+            html += "<div class='aqi-list' style='left:" + nowLeft + "%;height:" + temHeight +
+                "px;width:" + temWidth + "%;background-color:" +
+                colors[Math.floor(Math.random() * 12)] + "'></div>";
             var infoLeft = nowLeft < 50 ? "left:" + nowLeft : "right:" + (100 - nowLeft - temWidth);
-            html += "<div class='aqi-info' style='position:absolute;" + infoLeft + "%;bottom:" + (temHeight + 20) + "px;'>日期：" + (pageState.nowGraTime === "day" ? key + "<br />空气质量：" + (temHeight * 2) : (selectedData[key].Start + "~" + selectedData[key].End) + "<br />平均空气质量：" + (temHeight * 2)) + "</div>";
+            html += "<div class='aqi-info' style='position:absolute;" + infoLeft + "%;bottom:" +
+                (temHeight + 20) + "px;'>日期：" + (pageState.nowGraTime === "day" ?
+                    key + "<br />空气质量：" + (temHeight * 2) :
+                    (selectedData[key].Start + "~" + selectedData[key].End) + "<br />平均空气质量：" +
+                    (temHeight * 2)) + "</div>";
             nowLeft += (temWidth + temSpace);
         }
     }
