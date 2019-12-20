@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- <body onload="setInterval(openWindow, 1000)"> -->
+
+<body>
+
+    <h2></h2>
+
+    <!-- 定时打开窗口 -->
+    <script>
+        var body = document.querySelector('body');
+
+        // body.onload = setInterval(() => {
+        //     openWindow();
+        // }, 1000);
+        body.onload = setInterval(openWindow, 1000);
+
+        function openWindow() {
+            window.open('', 'window');
+        }
+    </script>
+</body>
+
+</html>
