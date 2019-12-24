@@ -35,6 +35,10 @@ let projects = [{
         url: 'project/timepiece.html'
     },
     {
+        name: 'nblog',
+        url: 'nblog/index.html'
+    },
+    {
         name: 'more...',
         url: '#'
     }
