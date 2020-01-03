@@ -26,14 +26,86 @@ body {
 }
 
 .preloader {
-    position: fixed;
+    /* position: fixed; */
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
-    z-index: 9;
+    z-index: 999999;
     background-color: #ffffff;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url(../images/preloader.svg);
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.main-header .header-upper {
+    position: relative;
+}
+
+.main-header .header-upper::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    bottom: -42px;
+    width: 100%;
+    height: 42px;
+    background: url(../images/menu-shadow.png) center center no-repeat;
+}
+
+.main-header .nav-outer {
+    position: relative;
+    float: left;
+    float: right;
+}
+
+.main-header .header-upper .logo-box {
+    position: relative;
+    padding: 30px 0px 0px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+}
+
+.main-header .header-upper .logo-box .logo {
+    position: relative;
+}
+
+.main-header .header-upper .option-box {
+    position: relative;
+    float: right;
+    padding: 46px 0px 0px;
+    margin-left: 40px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+}
+
+.main-header .header-upper .option-box .search-box-outer {
+    position: relative;
+    float: left;
+}
+
+.main-header .header-upper .option-box .nav-btn {
+    position: relative;
+    float: left;
+    color: #ffffff;
+    font-size: 22px;
+    margin-left: 22px;
+    cursor: pointer;
+}
+
+.main-header .header-upper .search-box-btn {
+    position: relative;
 }
