@@ -44,3 +44,94 @@ body {
     height: 32px;
     margin-left: 3px;
 }
+
+.top .tel {
+    background: url(../images/icon1.jpg) no-repeat left center;
+    margin-right: 20px;
+}
+
+.top .mail {
+    background: url(../images/icon2.jpg) no-repeat left center;
+}
+
+.header {
+    width: 100%;
+    min-width: 1150px;
+    position: relative;
+}
+
+.head {
+    width: 1150px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.head .logo {
+    width: 227px;
+    height: 48px;
+    margin-top: 30px;
+    float: left;
+}
+
+.head .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.head .nav {
+    width: 780px;
+    float: right;
+}
+
+.head .nav li {
+    width: auto;
+    height: 120px;
+    float: left;
+    margin-left: 11px;
+}
+
+.head .nav li a {
+    display: inline-block;
+    color: #8d8d8d;
+    padding: 0px 20px;
+}
+
+.head .nav li a p {
+    font-size: 16px;
+    color: #575757;
+    padding-top: 40px;
+}
+
+.head .nav li.now,
+.head .nav li:hover {
+    background: #1C70EF;
+}
+
+.head .nav li.now a,
+.head .nav li.now a p,
+.head .nav li:hover a,
+.head .nav li:hover a p {
+    color: #ffffff;
+}
+
+.head .nav li .er_bg {
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    left: 0px;
+    padding: 30px 0px 45px;
+    background: #E6E6E6;
+    z-index: 999999;
+    border: 1px solid #ffffff;
+    /* display: none; */
+}
+
+.head .nav li:hover .er_bg {
+    display: block;
+}
+
+.head .nav li .er {
+    width: 1150px;
+    height: 120px;
+    margin: 0px auto;
+}
