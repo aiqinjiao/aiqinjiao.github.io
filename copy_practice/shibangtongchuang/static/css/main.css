@@ -123,7 +123,7 @@ body {
     background: #E6E6E6;
     z-index: 999999;
     border: 1px solid #ffffff;
-    /* display: none; */
+    display: none;
 }
 
 .head .nav li:hover .er_bg {
@@ -134,4 +134,27 @@ body {
     width: 1150px;
     height: 120px;
     margin: 0px auto;
+}
+
+.head .nav li .er li {
+    width: 185px;
+    margin-left: 80px;
+}
+
+.head .nav li .er li a {
+    line-height: 30px;
+    color: #555555;
+}
+
+.head .nav li:hover .er li {
+    background: none;
+}
+
+.head .nav li .er li a:hover {
+    color: #1C70EF;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
 }
