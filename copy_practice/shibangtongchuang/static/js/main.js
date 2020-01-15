@@ -6,13 +6,14 @@ let banner_slides_li = banner.querySelectorAll('.slides li');
 banner_slides_li[0].style.display = 'block';
 
 // 3秒钟切换图片
-// setInterval(banner_slides, 3000);
+setInterval(banner_slides, 3000);
 
 // 图片切换方法，切换圆点跟随图片高亮
 function banner_slides() {
     for (let i = 0; i < banner_slides_li.length; i++) {
         if (banner_slides_li[i].style.display === 'block') {
-            banner_slides_li[i].style.display = 'none';
+            // banner_slides_li[i].style.display = 'none';
+            banner_slides_li[i].removeAttribute('style');
             banner_flexslider_ol_a[i].removeAttribute('class');
             if (i === banner_slides_li.length - 1) {
                 i = -1;
@@ -42,11 +43,12 @@ banner_flexslider_ol_a[0].setAttribute('class', 'flex-active');
 /**
  * 1.点击图片圆点，切换到对应图片
  * 2.当前图片对应圆点高亮
- * 3.5秒后继续执行轮播
  */
 for (let i = 0; i < banner_flexslider_ol_a.length; i++) {
     banner_flexslider_ol_a[i].addEventListener('click', function() {
-        banner_flexslider_ol_a[i].parentNode.querySelector('.flex-active').removeAttribute('class');
+        banner_flexslider_ol_a[i].parentNode.parentNode.querySelector('.flex-active').removeAttribute('class');
+        banner_flexslider_ol_a[i].setAttribute('class', 'flex-active');
+        banner_slides_li[i].parentNode.querySelector('[style]').removeAttribute('style');
+        banner_slides_li[i].style.display = 'block';
     })
 }
-// 应该监听ol 判断是第几个a
