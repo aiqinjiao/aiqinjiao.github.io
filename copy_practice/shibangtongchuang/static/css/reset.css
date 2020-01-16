@@ -98,17 +98,21 @@ acronym {
     visibility: hidden;
 }
 
+
+/* 
 .clearfix {
     display: inline-block;
-}
+} */
 
-* html .clearfix {
+
+/* * html .clearfix {
     height: 1%;
-}
+} */
 
-.clearfix {
+
+/* .clearfix {
     display: block;
-}
+} */
 
 
 /*通用父子盒子嵌套浮动问题解决，结束*/

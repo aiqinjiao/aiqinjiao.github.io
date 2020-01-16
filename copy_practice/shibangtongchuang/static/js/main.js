@@ -12,7 +12,6 @@ setInterval(banner_slides, 3000);
 function banner_slides() {
     for (let i = 0; i < banner_slides_li.length; i++) {
         if (banner_slides_li[i].style.display === 'block') {
-            // banner_slides_li[i].style.display = 'none';
             banner_slides_li[i].removeAttribute('style');
             banner_flexslider_ol_a[i].removeAttribute('class');
             if (i === banner_slides_li.length - 1) {
@@ -46,9 +45,48 @@ banner_flexslider_ol_a[0].setAttribute('class', 'flex-active');
  */
 for (let i = 0; i < banner_flexslider_ol_a.length; i++) {
     banner_flexslider_ol_a[i].addEventListener('click', function() {
-        banner_flexslider_ol_a[i].parentNode.parentNode.querySelector('.flex-active').removeAttribute('class');
         banner_flexslider_ol_a[i].setAttribute('class', 'flex-active');
+        banner_flexslider_ol_a[i].parentNode.parentNode.querySelector('.flex-active').removeAttribute('class');
         banner_slides_li[i].parentNode.querySelector('[style]').removeAttribute('style');
         banner_slides_li[i].style.display = 'block';
     })
 }
+
+// .mainPhoto 图片切换
+/**
+ * 1. 自动切换
+ * 2. 手动切换
+ */
+let photos = document.querySelectorAll('.i_mac .photo li');
+photos[0].style.display = 'block';
+
+setInterval(photo_list, 5000);
+
+function photo_list() {
+    for (let i = 0; i < photos.length; i++) {
+        if (photos[i].style.display === 'block') {
+            photos[i].removeAttribute('style');
+            if (i === photos.length - 1) {
+                i = -1;
+            }
+            photos[i + 1].style.display = 'block';
+            break;
+        }
+    }
+}
+
+let goLeft = document.querySelector('.i_mac .goLeft');
+let goRight = document.querySelector('.i_mac .goRight');
+
+goLeft.addEventListener('click', function() {
+    for (let i = 0; i < photos.length; i++) {
+        if (photos[i].style.display === 'block') {
+            photos[i].removeAttribute('style');
+            if (i === 0) {
+                i = photos.length;
+            }
+            photos[i - 1].style.display = 'block';
+        }
+    }
+});
+goRight.addEventListener('click', photo_list);
