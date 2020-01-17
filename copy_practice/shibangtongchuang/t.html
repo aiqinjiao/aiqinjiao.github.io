@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* :nth-of-type 
+        1. 如果是元素后面按类型数，譬如 p:nth-of-type(2)，就是数同一层级里面的第2个P元素
+        2. 如果是属性后面按类型数，譬如 .item:nth-of-type(2)， 
+        就是数有class=".item"的相同元素里面的第2个，并且有class=".item"的元素
+        最好不要用class定位
+        @author: 贾兵坤
+        */
+        /* .item:nth-of-type(2) {
+            color: red;
+        } */
+        
+        .item:nth-child(2) {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="item">这是锻若</p>
+    <span class="item">这是span</span>
+    <div>
+        <p class="item">这是锻若</p>
+        <p class="item">这是锻若</p>
+    </div>
+    <span class="item">这是span</span>
+    <span class="item">这是span</span>
+    <p>这是锻若</p>
+    <p class="item">这是锻若</p>
+    <p class="item">这是锻若</p>
+</body>
+
+</html>

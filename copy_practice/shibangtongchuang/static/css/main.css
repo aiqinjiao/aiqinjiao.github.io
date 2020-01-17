@@ -453,3 +453,144 @@ body {
     top: -1px;
     z-index: -9;
 }
+
+.i_mb {
+    width: 1150px;
+    margin: 35px auto;
+}
+
+.i_mb dl {
+    width: 230px;
+    float: left;
+    border-right: 1px dashed #dddddd;
+    margin-right: 50px;
+}
+
+.i_mb dl dt {
+    width: 110px;
+    float: left;
+    text-align: center;
+}
+
+.i_mb dl dd {
+    width: 105px;
+    float: left;
+    background: url(../images/icon20.png) no-repeat left 7.5px;
+    padding-left: 15px;
+}
+
+.i_mb .caption {
+    width: 100%;
+    font-size: 18px;
+    color: #444444;
+}
+
+.i_mb p {
+    width: 100%;
+    font-size: 12px;
+    color: #555555;
+}
+
+.bg_c {
+    width: 100%;
+    height: 12px;
+    background: url(../images/bg_c.jpg) repeat-x;
+}
+
+.f_nbg {
+    width: 100%;
+    background: #323232;
+    padding: 55px 0px;
+}
+
+.f_nbg .f_nav {
+    width: 1150px;
+    margin: 0px auto;
+}
+
+.f_nbg .f_nav li {
+    width: 120px;
+    height: 130px;
+    float: left;
+    border-right: 1px solid #444444;
+    margin-right: 40px;
+}
+
+.f_nbg .f_nav li p {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    background: url(../images/icon17.jpg) no-repeat left;
+}
+
+.f_nbg .f_nav li p a {
+    width: 100%;
+    font-size: 14px;
+    color: #888888;
+    margin-left: 10px;
+}
+
+.f_nbg .f_nav li p a:hover {
+    color: #eeeeee;
+}
+
+.f_nbg .f_nav li p.caption {
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    background: none;
+}
+
+.f_nbg .f_nav li p.caption a {
+    font-size: 18px;
+    margin-left: 0px;
+}
+
+.f_nbg .f_nav li:nth-last-child(-n+2) {
+    border: none;
+}
+
+.f_nbg .f_nav .code {
+    width: 113px;
+    height: 135px;
+    padding: 8px;
+    margin: 0px auto;
+    background: #444444;
+}
+
+.f_nbg .f_nav .code p {
+    background: none;
+    text-align: center;
+    color: #999999;
+}
+
+.bq_bg {
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    text-align: center;
+}
+
+.bq_bg .bq {
+    width: 1150px;
+    height: 20px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+.bq_bg .bq span {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #bbbbbb;
+    margin-right: 30px;
+    vertical-align: top;
+}
+
+.bq_bg .bq a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}

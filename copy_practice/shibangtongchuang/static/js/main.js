@@ -6,7 +6,7 @@ let banner_slides_li = banner.querySelectorAll('.slides li');
 banner_slides_li[0].style.display = 'block';
 
 // 3秒钟切换图片
-setInterval(banner_slides, 3000);
+// setInterval(banner_slides, 3000);
 
 // 图片切换方法，切换圆点跟随图片高亮
 function banner_slides() {
@@ -45,9 +45,9 @@ banner_flexslider_ol_a[0].setAttribute('class', 'flex-active');
  */
 for (let i = 0; i < banner_flexslider_ol_a.length; i++) {
     banner_flexslider_ol_a[i].addEventListener('click', function() {
+        banner_flexslider_ol.querySelector('a[class]').removeAttribute('class');
         banner_flexslider_ol_a[i].setAttribute('class', 'flex-active');
-        banner_flexslider_ol_a[i].parentNode.parentNode.querySelector('.flex-active').removeAttribute('class');
-        banner_slides_li[i].parentNode.querySelector('[style]').removeAttribute('style');
+        banner.querySelector('.slides li[style]').removeAttribute('style');
         banner_slides_li[i].style.display = 'block';
     })
 }
