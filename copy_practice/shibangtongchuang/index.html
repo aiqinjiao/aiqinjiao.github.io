@@ -8,125 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/main.css">
+    <script src="static/js/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#header').load('base/header.html');
+            $('#footer').load('base/footer.html');
+        });
+    </script>
 </head>
 
 <body>
-    <div class="t_bg">
-        <div class="top">
-            <span class="tel">1234-5678-9999</span>
-            <span class="mail">
-                <a href="mailto:shibangtongchuang@163.com">shibangtongchuang@163.com</a>
-            </span>
-            <div class="top_r">
-                <a href=""><img src="static/picture/icon3.jpg" alt=""></a>
-                <a href=""><img src="static/picture/icon4.jpg" alt=""></a>
-                <a href=""><img src="static/picture/icon5.jpg" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="header">
-        <div class="head">
-            <div class="logo">
-                <a href="index.html"><img src="static/picture/logo.jpg" alt=""></a>
-            </div>
-            <ul class="nav">
-                <li>
-                    <a href="index.html">
-                        <p>首页</p>
-                        Home
-                    </a>
-                </li>
-                <li class="now">
-                    <a href="about_a.html">
-                        <p>关于我们</p>
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="product.html">
-                        <p>产品中心</p>
-                        Product
-                    </a>
-                    <div class="er_bg">
-                        <ul class="er">
-                            <li>
-                                <b><a href="">百万高清系列</a></b>
-                                <p>
-                                    <a href="">家用云台摄像机</a>
-                                </p>
-                                <p>
-                                    <a href="">室外防水机</a>
-                                </p>
-                                <p>
-                                    <a href="">半球/卡片机套装</a>
-                                </p>
-                            </li>
-                            <li>
-                                <b><a href="">标清系列</a></b>
-                                <p>
-                                    <a href="">家用云台摄像机</a>
-                                </p>
-                                <p>
-                                    <a href="">室外防水机</a>
-                                </p>
-                                <p>
-                                    <a href="">半球/卡片机套装</a>
-                                </p>
-                            </li>
-                            <li>
-                                <b><a href="">户外防水系列</a></b>
-                                <p>
-                                    <a href="">家用云台摄像机</a>
-                                </p>
-                                <p>
-                                    <a href="">室外防水机</a>
-                                </p>
-                                <p>
-                                    <a href="">半球/卡片机套装</a>
-                                </p>
-                            </li>
-                            <li>
-                                <b><a href="">室内系列</a></b>
-                                <p>
-                                    <a href="">家用云台摄像机</a>
-                                </p>
-                                <p>
-                                    <a href="">室外防水机</a>
-                                </p>
-                                <p>
-                                    <a href="">半球/卡片机套装</a>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="service.html">
-                        <p>服务支持</p>
-                        Service
-                    </a>
-                </li>
-                <li>
-                    <a href="news.html">
-                        <p>新闻中心</p>
-                        News
-                    </a>
-                </li>
-                <li>
-                    <a href="shop.html">
-                        <p>在线商店</p>
-                        Shop
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html">
-                        <p>联系我们</p>
-                        Contact Us
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <div id="header"></div>
     <div class="banner">
         <div class="slider">
             <div class="flexslider">
@@ -135,7 +27,7 @@
                         <a href=""><img src="static/picture/banner.jpg" alt=""></a>
                     </li>
                     <li name='p2'>
-                        <a href=""><img src="static/picture/pic3.jpg"" alt=""></a>
+                        <a href=""><img src="static/picture/pic3.jpg" alt=""></a>
                     </li>
                     <li name='p3'>
                         <a href=""><img src="static/picture/pic2.jpg" alt=""></a>
@@ -299,110 +191,7 @@
             </a>
         </dl>
     </div>
-    <div class="bg_c"></div>
-    <div class="f_nbg">
-        <ul class="f_nav clearfix">
-            <li>
-                <p class="caption">
-                    <a href="">产品中心</a>
-                </p>
-                <p>
-                    <a href="">高清摄像机</a>
-                </p>
-                <p>
-                    <a href="">百万高清摄像机</a>
-                </p>
-                <p>
-                    <a href="">室内摄像机</a>
-                </p>
-                <p>
-                    <a href="">户外摄像机</a>
-                </p>
-            </li>
-            <li>
-                <p class="caption">
-                    <a href="">服务支持</a>
-                </p>
-                <p>
-                    <a href="">在线光盘</a>
-                </p>
-                <p>
-                    <a href="">售后服务</a>
-                </p>
-                <p>
-                    <a href="">支撑与帮助</a>
-                </p>
-            </li>
-            <li>
-                <p class="caption">
-                    <a href="">关于世邦</a>
-                </p>
-                <p>
-                    <a href="">公司介绍</a>
-                </p>
-                <p>
-                    <a href="">资质证书</a>
-                </p>
-                <p>
-                    <a href="">联系我们</a>
-                </p>
-                <p>
-                    <a href="">人才招聘</a>
-                </p>
-            </li>
-            <li>
-                <p class="caption">
-                    <a href="">关注我们</a>
-                </p>
-                <p>
-                    <a href="">新浪微博</a>
-                </p>
-                <p>
-                    <a href="">微信</a>
-                </p>
-                <p>
-                    <a href="">论坛</a>
-                </p>
-            </li>
-            <li>
-                <p class="caption">
-                    <a href="">新闻中心</a>
-                </p>
-                <p>
-                    <a href="">公司新闻</a>
-                </p>
-                <p>
-                    <a href="">行业新闻</a>
-                </p>
-                <p>
-                    <a href="">活动资讯</a>
-                </p>
-            </li>
-            <li>
-                <p class="caption">
-                    <a href="">在线商城</a>
-                </p>
-                <p>
-                    <a href="">天猫商城</a>
-                </p>
-                <p>
-                    <a href="">诚信通</a>
-                </p>
-            </li>
-            <li class="code">
-                <img src="static/picture/code.jpg" alt="">
-                <p>微信号：shibang</p>
-            </li>
-        </ul>
-    </div>
-    <div class="bq_bg">
-        <div class="bq">
-            <span>版权所有 © 2011-2015 深圳市世邦同创科技有限公司 粤ICP备12002669号</span>
-            <a href=""><img src="static/picture/icon18.jpg" alt=""></a>
-            <a href=""><img src="static/picture/icon19.jpg" alt=""></a>
-        </div>
-    </div>
-
+    <div id="footer"></div>
     <script src="static/js/main.js"></script>
 </body>
 

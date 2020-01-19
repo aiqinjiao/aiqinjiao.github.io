@@ -1,12 +1,12 @@
 // banner
-let banner = document.querySelector('.banner');
+var banner = document.querySelector('.banner');
 
 // 默认显示第一张图片
-let banner_slides_li = banner.querySelectorAll('.slides li');
+var banner_slides_li = banner.querySelectorAll('.slides li');
 banner_slides_li[0].style.display = 'block';
 
 // 3秒钟切换图片
-let timer = setInterval(banner_carousel, 3000);
+var timer = setInterval(banner_carousel, 3000);
 
 banner.addEventListener('mouseover', function() {
     clearInterval(timer);
@@ -36,15 +36,14 @@ function banner_carousel() {
             }
             banner_slides_li[i + 1].style.display = 'block';
             banner_flexslider_ol_a[i + 1].setAttribute('class', 'flex-active');
-            banner_slides_li[i].removeAttribute('style');
             break;
         }
     }
 }
 
 // 添加图片切换圆点
-let banner_flexslider = banner.querySelector('.flexslider');
-let banner_flexslider_ol = document.createElement('ol');
+var banner_flexslider = banner.querySelector('.flexslider');
+var banner_flexslider_ol = document.createElement('ol');
 for (let i = 0; i < banner_slides_li.length; i++) {
     let ol_li = document.createElement('li');
     ol_li.innerHTML = '<a></a>';
@@ -53,7 +52,7 @@ for (let i = 0; i < banner_slides_li.length; i++) {
 banner_flexslider.appendChild(banner_flexslider_ol);
 
 // 默认高亮第一个圆点
-let banner_flexslider_ol_a = banner_flexslider_ol.querySelectorAll('li a');
+var banner_flexslider_ol_a = banner_flexslider_ol.querySelectorAll('li a');
 banner_flexslider_ol_a[0].setAttribute('class', 'flex-active');
 
 // 点击圆点切换图片
@@ -75,7 +74,7 @@ for (let i = 0; i < banner_flexslider_ol_a.length; i++) {
  * 1. 自动切换
  * 2. 手动切换
  */
-let photos = document.querySelectorAll('.i_mac .photo li');
+var photos = document.querySelectorAll('.i_mac .photo li');
 photos[0].style.display = 'block';
 
 setInterval(photo_list, 5000);
@@ -93,8 +92,8 @@ function photo_list() {
     }
 }
 
-let goLeft = document.querySelector('.i_mac .goLeft');
-let goRight = document.querySelector('.i_mac .goRight');
+var goLeft = document.querySelector('.i_mac .goLeft');
+var goRight = document.querySelector('.i_mac .goRight');
 
 goLeft.addEventListener('click', function() {
     for (let i = 0; i < photos.length; i++) {
