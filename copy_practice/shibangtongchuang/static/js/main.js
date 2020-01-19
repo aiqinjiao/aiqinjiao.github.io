@@ -6,10 +6,27 @@ let banner_slides_li = banner.querySelectorAll('.slides li');
 banner_slides_li[0].style.display = 'block';
 
 // 3秒钟切换图片
-// setInterval(banner_slides, 3000);
+let timer = setInterval(banner_carousel, 3000);
+
+banner.addEventListener('mouseover', function() {
+    clearInterval(timer);
+    /**
+     * Google浏览器在执行banner_carousel()方法删除sytle后，
+     * 会留下空的style属性，所以在进入banner后要删除空的style
+     */
+    for (let i = 0; i < banner_slides_li.length; i++) {
+        if (banner_slides_li[i].getAttribute('style') === "") {
+            banner_slides_li[i].removeAttribute('style');
+        }
+    }
+})
+
+banner.addEventListener('mouseout', function() {
+    timer = setInterval(banner_carousel, 3000);
+})
 
 // 图片切换方法，切换圆点跟随图片高亮
-function banner_slides() {
+function banner_carousel() {
     for (let i = 0; i < banner_slides_li.length; i++) {
         if (banner_slides_li[i].style.display === 'block') {
             banner_slides_li[i].removeAttribute('style');
@@ -19,6 +36,7 @@ function banner_slides() {
             }
             banner_slides_li[i + 1].style.display = 'block';
             banner_flexslider_ol_a[i + 1].setAttribute('class', 'flex-active');
+            banner_slides_li[i].removeAttribute('style');
             break;
         }
     }
@@ -47,7 +65,7 @@ for (let i = 0; i < banner_flexslider_ol_a.length; i++) {
     banner_flexslider_ol_a[i].addEventListener('click', function() {
         banner_flexslider_ol.querySelector('a[class]').removeAttribute('class');
         banner_flexslider_ol_a[i].setAttribute('class', 'flex-active');
-        banner.querySelector('.slides li[style]').removeAttribute('style');
+        banner_flexslider.querySelector('.slides li[style]').removeAttribute('style');
         banner_slides_li[i].style.display = 'block';
     })
 }
