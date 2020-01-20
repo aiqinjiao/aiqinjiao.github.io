@@ -66,7 +66,7 @@ for (let i = 0; i < banner_flexslider_ol_a.length; i++) {
         banner_flexslider_ol_a[i].setAttribute('class', 'flex-active');
         banner_flexslider.querySelector('.slides li[style]').removeAttribute('style');
         banner_slides_li[i].style.display = 'block';
-    })
+    });
 }
 
 // .mainPhoto 图片切换
@@ -107,3 +107,11 @@ goLeft.addEventListener('click', function() {
     }
 });
 goRight.addEventListener('click', photo_list);
+
+// about 页面子菜单切换高亮显示
+var about_nav_span = document.querySelectorAll('.about_nav div span');
+for (let i = 0; i < about_nav.length; i++) {
+    about_nav_span[i].addEventListener('click', function() {
+
+    });
+}
