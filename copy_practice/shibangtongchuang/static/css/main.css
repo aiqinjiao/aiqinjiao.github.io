@@ -724,3 +724,253 @@ body {
     right: 5px;
     bottom: 5px;
 }
+
+.recru {
+    width: 100%;
+    background: #ffffff;
+    padding: 25px 0 45px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.recru>div {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.recru table {
+    width: 100%;
+    line-height: 215%;
+}
+
+.recru table tr td {
+    width: 50%;
+    padding: 10px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    vertical-align: top;
+}
+
+.recru table tr td:last-child {
+    border-right: none;
+}
+
+.recru table tr td .title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #0037ff;
+}
+
+.recru table tr td .caption {
+    font-weight: 600;
+    color: #000000;
+}
+
+.pages {
+    width: 100%;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.pages a {
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    line-height: 30px;
+    color: #444444;
+    border-bottom: 1px solid #dddddd;
+}
+
+.pages .active,
+.pages a:hover {
+    color: #ffffff;
+    background: #1C6FEF;
+    border: #1C6FEF;
+}
+
+.product {
+    width: 100%;
+    padding: 25px 0 45px;
+}
+
+.path {
+    width: 1150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #555555;
+}
+
+.path a {
+    color: #555555;
+}
+
+.path a:hover {
+    color: #5595CB;
+}
+
+.pro {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.categ li {
+    float: left;
+    width: 255px;
+    height: 185px;
+    background: #d1d1d1;
+    margin-right: 2px;
+}
+
+.categ li.active {
+    width: 377px;
+    background: #1C6FEF;
+}
+
+.categ li.active a p {
+    color: #ffffff;
+    padding-top: 50px;
+}
+
+.categ li a span {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background: url(../images/icon23.png) no-repeat;
+}
+
+.categ li.active a span {
+    display: block;
+}
+
+.categ li:hover {
+    background: #1C6FEF;
+}
+
+.categ li:last-child {
+    padding-right: 0;
+}
+
+.categ li:hover a p {
+    color: #ffffff;
+}
+
+.categ li a p {
+    font-size: 30px;
+    color: #555555;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.search {
+    width: 1150px;
+    height: 90px;
+}
+
+.search div {
+    float: right;
+    width: 330px;
+    height: 45px;
+    margin-top: 22px;
+    position: relative;
+}
+
+.search input[type="text"] {
+    width: 263px;
+    height: 43px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    font-size: 14px;
+    padding: 0 10px;
+    color: #333333;
+}
+
+.search input[type="submit"] {
+    width: 45px;
+    height: 45px;
+    background: #000000 url(../images/icon22.png) no-repeat center;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content {
+    width: 1148px;
+    margin: 0 auto;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+}
+
+.content li {
+    width: 382px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1PX solid #dddddd;
+    float: left;
+    position: relative;
+}
+
+.content li:nth-child(3n+3) {
+    border-right: 0;
+}
+
+.content li:nth-last-child(-n+3) {
+    border-bottom: 0;
+}
+
+.content li .sur {
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+.content li .sur p {
+    width: 90%;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    padding-top: 40px;
+}
+
+.content li .in {
+    width: 100%;
+    height: 317px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.content li:hover .in {
+    opacity: 1;
+}
+
+.content li:hover .sur {
+    opacity: 0.1;
+}
+
+.content li .in p {
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #807F7F;
+    line-height: 195%;
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+
+.content li .in a {
+    font-size: 13px;
+    color: #1B6FEF;
+}
