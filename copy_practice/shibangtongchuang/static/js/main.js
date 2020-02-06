@@ -107,11 +107,3 @@ goLeft.addEventListener('click', function() {
     }
 });
 goRight.addEventListener('click', photo_list);
-
-// about 页面子菜单切换高亮显示
-var about_nav_span = document.querySelectorAll('.about_nav div span');
-for (let i = 0; i < about_nav.length; i++) {
-    about_nav_span[i].addEventListener('click', function() {
-
-    });
-}

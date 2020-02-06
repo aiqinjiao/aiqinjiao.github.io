@@ -974,3 +974,134 @@ body {
     font-size: 13px;
     color: #1B6FEF;
 }
+
+.pro-view{
+    width: 100%;
+    background: #ffffff;
+}
+
+.pro-view>div{
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.pro-view .view{
+    width: 100%;
+    height: 539px;
+    margin-top: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.pro-view .view .view-img{
+    width: 574px;
+    border-right: 1px solid #dddddd;
+    float: left;
+    position: relative;
+}
+
+.pro-view .view .view-img .exhibition{
+    width: 100%;
+    height: 424px;
+    position: relative;
+}
+
+.pro-view .view .view-img .exhibition img{
+    width: 574px;
+    height: 424px;
+}
+
+.pro-view .view .view-img ul{
+    padding-top: 20px;
+}
+
+.pro-view .view .view-img ul li{
+    float: left;
+    width: 114px;
+    height: 94px;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+.pro-view .view .view-img ul li:last-child{
+    border-right: none;
+}
+
+.pro-view .view .view-img ul li img{
+    width: 114px;
+    height: 94px;
+}
+
+.pro-view .view .view-img .exhibition span{
+    display: inline-block;
+    width: 32px;
+    height: 27px;
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    background: url(../images/icon24.png) no-repeat;
+}
+
+.pro-view .view .view-info{
+    float: right;
+    width: 550px;
+    position: relative;
+}
+
+.pro-view .view .view-info h1{
+    line-height: 180%;
+    font-size: 30px;
+    color: #034DC5;
+    padding: 45px 0 5px;
+}
+
+.pro-view .view .view-info h3{
+    font-size: 24px;
+    color: #000000;
+}
+
+.pro-view .view .view-info p{
+    font-size: 14px;
+    color: #555555;
+    line-height: 215%;
+}
+
+.pro-view .view .view-info p.desc{
+    font-size: 20px;
+    color: #333333;
+    margin-top: 20px;
+}
+
+.pro-view .view .view-info a{
+    display: inline-block;
+    width: 170px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #888888;
+    border-radius: 7px;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.pro-view .view .view-info a.buy{
+    background: #0055D8; 
+}
+
+.pro-view .view .view-info .detailed{
+    display: none;
+    width: 574px;
+    height: 424px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#canv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    cursor: move;
+}
