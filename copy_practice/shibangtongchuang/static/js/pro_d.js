@@ -44,20 +44,23 @@ canvas.addEventListener('mouseout', function(){
 canvas.addEventListener('mousemove', function(e){
     window.scroll(0, view_img.offsetTop);
     ctx.clearRect(x, y, width, height);
-    // 将鼠标放在蒙层中间
-    x = e.clientX - view_img.offsetLeft - width / 2;
-    y = e.clientY - height / 2;
     // 蒙层移动到边界的情况
     if (e.clientX < view_img.offsetLeft + width / 2) {
         x = 0;
-    }
-    if (e.clientX > view_img.offsetLeft + view_img.offsetWidth - width / 2) {
+    } else if (e.clientX > view_img.offsetLeft + view_img.offsetWidth - width / 2) {
         x = view_img.offsetWidth - width;
+    } else {
+        // 将鼠标放在蒙层中间
+        x = e.clientX - view_img.offsetLeft - width / 2;
     }
+    // 蒙层移动到边界的情况
     if (e.clientY < height / 2) {
         y = 0;
-    }if (e.clientY > canvas.offsetHeight - height / 2) {
+    } else if (e.clientY > canvas.offsetHeight - height / 2) {
         y = canvas.offsetHeight - height;
+    } else {
+        // 将鼠标放在蒙层中间
+        y = e.clientY - height / 2;
     }
     // 绘制蒙层
     ctx.fillStyle = '#dddddd';
@@ -69,3 +72,52 @@ canvas.addEventListener('mousemove', function(e){
     detail_img.style.left = -l + 'px';
     detail_img.style.top = -t + 'px';
 });
+
+// 页面滚动时功能描述菜单在固定在页面顶部
+var partic = document.querySelector('.particular');
+var partic_menu = partic.querySelector('.menu');
+var partic_menu_span = partic_menu.querySelectorAll('span');
+var partic_capt = partic.querySelectorAll('.caption');
+
+// 窗口滚动条事件
+window.addEventListener('scroll', function(){
+    if (window.scrollY > partic.offsetTop) {
+        // 当滚动距离超过功能描述菜单时固定菜单
+        partic_menu.style.position = 'fixed';
+        partic_menu.style.top = '0px';
+        if (window.scrollY >= partic_capt[1].offsetTop && window.scrollY < partic_capt[2].offsetTop) {
+            // 规格参数菜单高亮
+            partic_menu.querySelector('.current').removeAttribute('class');
+            partic_menu_span[1].setAttribute('class', 'current');
+        } else if (window.scrollY >= partic_capt[2].offsetTop && window.scrollY < partic_capt[3].offsetTop) {
+            // 产品图集菜单高亮
+            partic_menu.querySelector('.current').removeAttribute('class');
+            partic_menu_span[2].setAttribute('class', 'current');
+        } else if (window.scrollY >= partic_capt[3].offsetTop) {
+            // 更多产品菜单高亮
+            partic_menu.querySelector('.current').removeAttribute('class');
+            partic_menu_span[3].setAttribute('class', 'current');
+        } else {
+            // 功能描述菜单高亮
+            partic_menu.querySelector('.current').removeAttribute('class');
+            partic_menu_span[0].setAttribute('class', 'current');
+        }
+    } else {
+        partic_menu.style.position = 'static';
+    }
+});
+
+// 点击功能描述菜单跳转到对应的位置1·   
+for (let i = 0; i < partic_menu_span.length; i++) {
+    partic_menu_span[i].addEventListener('click', function(){
+        // 滚动条定位到对应的菜单内容
+        if (i === 0) {
+            window.scroll(0, partic.offsetTop);
+        } else {    
+            window.scroll(0, partic_capt[i].offsetTop);
+        }
+        // 菜单高亮切换
+        partic_menu.querySelector('.current').removeAttribute('class');
+        partic_menu_span[i].setAttribute('class', 'current');
+    });
+}

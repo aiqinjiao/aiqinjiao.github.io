@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning board</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #board{
+            border: 1px solid #333333;
+            margin-left: 10px;
+            cursor: pointer;
+            background: #ffffff;
+        }
+        div{
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+        }
+        input{
+            margin-left: 20px;
+        }
+        .rubber{
+            width: 50px;
+            height: 25px;
+            background: #EE7D11;
+        }
+    </style>
+</head>
+<body>  
+    <div class="nav">
+        <input type="color" class="color">
+        <input type="button" value="橡皮" class="rubber">
+        <input type="button" value="黑板" class="bg">
+    </div>
+    <canvas id="board" width="1200px" height="540px"></canvas>
+
+    <script>
+        var nav = document.querySelector('.nav');
+        var nColor = nav.querySelector('.color');
+        var nRubber = nav.querySelector('.rubber');
+        var bg = nav.querySelector('.bg');
+        var board = document.querySelector('#board');
+        var ctx = board.getContext('2d');
+        var isDrawing = false;
+        // 0-橡皮关闭， 1-橡皮打开， 2-用橡皮檫黑板
+        var isRubber = 0;
+        var x = 0;
+        var y = 0;
+
+        board.addEventListener('mousedown', function(e){
+            x = e.clientX - board.offsetLeft;
+            y = e.clientY - board.offsetTop;
+            if(isRubber === 0){  
+                isDrawing = true;
+            } else if(isRubber === 1) {
+                // 鼠标放在橡皮中间
+                drawRect(ctx, x-10, y-10, 20, 20);
+                isRubber = 2;
+            }
+        });
+
+        board.addEventListener('mousemove', function(e){
+            if(isDrawing === true && isRubber === 0){
+                drawLine(ctx, x, y, e.clientX - board.offsetLeft, e.clientY - board.offsetTop);
+                x = e.clientX - board.offsetLeft;
+                y = e.clientY - board.offsetTop;
+            } else if (isRubber === 2) {
+                drawRect(ctx, x-10, y-10, 20, 20);
+                x = e.clientX - board.offsetLeft - 10;
+                y = e.clientY - board.offsetTop - 10;
+                
+            }  
+        });
+
+        window.addEventListener('mouseup', function(e){
+            isDrawing = false;
+            if(isRubber === 2){
+                isRubber = 1;
+            }
+        });
+        
+        nRubber.addEventListener('click', function(){
+            if(nRubber.value === '橡皮'){
+                isDrawing = false;
+                isRubber = 1;
+                board.style.cursor = 'grab';
+                nRubber.value = '画笔';
+                nRubber.style.background = '#115EEE'
+            } else if(nRubber.value === '画笔'){
+                isRubber = 0;
+                board.style.cursor = 'pointer';
+                nRubber.value = '橡皮';
+                nRubber.style.background = '#EE7D11';
+            }
+        });
+
+        bg.addEventListener('click', function(){
+            if(bg.value === '黑板'){
+                bg.value = '白板';
+                board.style.background = '#000000';
+            } else if(bg.value === '白板'){
+                bg.value = '黑板';
+                board.style.background = '#ffffff';
+            }
+        });
+
+        function drawLine(context, x1, y1, x2, y2){
+            context.beginPath();
+            context.lineWidth = 1;
+            context.strokeStyle = nColor.value;
+            context.moveTo(x1, y1);
+            context.lineTo(x2, y2);
+            context.stroke();
+            context.closePath();
+        }
+
+        function drawRect(context, x, y, width, height){
+            context.fillStyle = '#ffffff';
+            context.fillRect(x, y, width, height);
+        }
+    </script>
+</body>
+</html>

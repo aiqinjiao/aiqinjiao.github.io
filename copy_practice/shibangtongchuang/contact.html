@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <script src="static/js/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('header').load('base/header.html');
+            $('footer').load('base/footer.html');
+        });
+    </script>
+</head>
+<body>
+    <header></header>
+    <div class="about_pic">
+        <img src="static/picture/banner_a.jpg" alt="">
+    </div>
+    <div class="about_nav">
+        <div>
+            <span><a href="about_a.html">公司介绍</a></span>
+            <span><a href="about_b.html">资质证书</a></span>
+            <span class="active"><a href="contact.html">联系我们</a></span>
+            <span><a href="about_d.html">人才招聘</a></span>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="clearfix">
+            <div class="info">
+                <p class="caption">深圳市世邦同创科技有限公司</p>
+                <p>网站：http://www.siepem.com</p>
+                <p>地址：深圳市宝安区石岩街道任达科技园A栋5楼</p>
+                <p>邮编：518055</p>
+                <p class="caption">商务合作</p>
+                <p>联系电话：+86 400-389-6386</p>
+                <p>邮箱：siepem@siepem.com</p>
+                <p>QQ：2430080147</p>
+                <p class="caption">客服服务</p>
+                <p>联系电话：400-100-5678</p>
+                <p>联系电话：+86 400-839-6386</p>
+                <p>邮箱：siepem@siepem.com</p>
+                <p>QQ：2430080147</p>
+            </div>
+            <div class="map"><img src="static/picture/map.jpg" alt=""></div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

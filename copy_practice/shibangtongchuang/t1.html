@@ -4,19 +4,28 @@
     
     <style type="text/css">
         canvas {
-border: 1px solid black;
-width: 560px;
-height: 360px;
-}
+            border: 1px solid black;
+                cursor: pointer;
+        }
+        .tool{
+                float: right;
+        }
+        input{
+                margin-right: 30px;
+        }
     </style>
     
     <title>Element: mousemove event - Examples - code sample</title>
 </head>
 <body>
-    
         <h1>Drawing with mouse events</h1>
        
-<canvas id="myPics" width="560" height="360"></canvas>
+<canvas id="myPics" width="1150" height="500"></canvas>
+<div class="tool">
+        <input type="color" class="color">
+        <input type="button" value='橡皮'>
+</div>
+
 <!-- <canvas id="myPics"></canvas> -->
 
     
@@ -32,6 +41,7 @@ const context = myPics.getContext('2d');
 
 // The x and y offset of the canvas from the edge of the page
 const rect = myPics.getBoundingClientRect();
+var color = document.querySelector('.color');
 
 // Add the event listeners for mousedown, mousemove, and mouseup
 myPics.addEventListener('mousedown', e => {
@@ -59,7 +69,7 @@ isDrawing = false;
 
 function drawLine(context, x1, y1, x2, y2) {
 context.beginPath();
-context.strokeStyle = 'black';
+context.strokeStyle = color.value;
 context.lineWidth = 1;
 context.moveTo(x1, y1);
 context.lineTo(x2, y2);

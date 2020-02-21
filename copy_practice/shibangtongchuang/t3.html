@@ -1,0 +1,30 @@
+<div id="space"></div>
+<ul id="nav"> 
+   <li><a href="#content1">美食</a></li> 
+   <li><a href="#content2">娱乐</a></li> 
+   <li><a href="#content3">超市</a></li> 
+   <li><a href="#content4">出行</a></li> 
+   <li><a href="#content5">养车</a></li> 
+</ul> 
+<div id="content1">内容区域一</div>
+<div id="content2">内容区域二</div>
+<div id="content3">内容区域三</div>
+<div id="content4">内容区域四</div>
+<div id="content5">内容区域五</div>
+<script type="text/javascript">
+    window.onscroll=function(){
+        var topScroll =document.body.scrollTop || document.documentElement.scrollTop;//滚动的距离,距离顶部的距离
+        console.log(topScroll,'topScroll')
+        var space  = document.getElementById("space");
+        var bignav  = document.getElementById("nav");//获取到导航栏id
+        var spaceOffsetHeight = space.offsetTop    //以spce的滚动高度为参照
+        console.log(spaceOffsetHeight,'navOffsetHeight')
+        if(topScroll > spaceOffsetHeight){  
+            bignav.style.position = 'fixed';
+            bignav.style.top = '0';
+            bignav.style.zIndex = '9999';
+        } else {
+            bignav.style.position = 'static';
+        }
+    }
+</script>
