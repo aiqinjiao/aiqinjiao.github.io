@@ -975,46 +975,46 @@ body {
     color: #1B6FEF;
 }
 
-.pro-view{
+.pro-view {
     width: 100%;
     background: #ffffff;
 }
 
-.pro-view>div{
+.pro-view>div {
     width: 1150px;
     margin: 0 auto;
 }
 
-.pro-view .view{
+.pro-view .view {
     width: 100%;
     height: 539px;
     margin-top: 20px;
     border-bottom: 1px solid #dddddd;
 }
 
-.pro-view .view .view-img{
+.pro-view .view .view-img {
     width: 574px;
     border-right: 1px solid #dddddd;
     float: left;
     position: relative;
 }
 
-.pro-view .view .view-img .exhibition{
+.pro-view .view .view-img .exhibition {
     width: 100%;
     height: 424px;
     position: relative;
 }
 
-.pro-view .view .view-img .exhibition img{
+.pro-view .view .view-img .exhibition img {
     width: 574px;
     height: 424px;
 }
 
-.pro-view .view .view-img ul{
+.pro-view .view .view-img ul {
     padding-top: 20px;
 }
 
-.pro-view .view .view-img ul li{
+.pro-view .view .view-img ul li {
     float: left;
     width: 114px;
     height: 94px;
@@ -1022,16 +1022,16 @@ body {
     border-right: 1px solid #dddddd;
 }
 
-.pro-view .view .view-img ul li:last-child{
+.pro-view .view .view-img ul li:last-child {
     border-right: none;
 }
 
-.pro-view .view .view-img ul li img{
+.pro-view .view .view-img ul li img {
     width: 114px;
     height: 94px;
 }
 
-.pro-view .view .view-img .exhibition span{
+.pro-view .view .view-img .exhibition span {
     display: inline-block;
     width: 32px;
     height: 27px;
@@ -1041,37 +1041,37 @@ body {
     background: url(../images/icon24.png) no-repeat;
 }
 
-.pro-view .view .view-info{
+.pro-view .view .view-info {
     float: right;
     width: 550px;
     position: relative;
 }
 
-.pro-view .view .view-info h1{
+.pro-view .view .view-info h1 {
     line-height: 180%;
     font-size: 30px;
     color: #034DC5;
     padding: 45px 0 5px;
 }
 
-.pro-view .view .view-info h3{
+.pro-view .view .view-info h3 {
     font-size: 24px;
     color: #000000;
 }
 
-.pro-view .view .view-info p{
+.pro-view .view .view-info p {
     font-size: 14px;
     color: #555555;
     line-height: 215%;
 }
 
-.pro-view .view .view-info p.desc{
+.pro-view .view .view-info p.desc {
     font-size: 20px;
     color: #333333;
     margin-top: 20px;
 }
 
-.pro-view .view .view-info a{
+.pro-view .view .view-info a {
     display: inline-block;
     width: 170px;
     height: 47px;
@@ -1085,11 +1085,11 @@ body {
     margin-right: 20px;
 }
 
-.pro-view .view .view-info a.buy{
-    background: #0055D8; 
+.pro-view .view .view-info a.buy {
+    background: #0055D8;
 }
 
-.pro-view .view .view-info .detailed{
+.pro-view .view .view-info .detailed {
     display: none;
     width: 574px;
     height: 424px;
@@ -1098,7 +1098,7 @@ body {
     left: 0;
 }
 
-#canv{
+#canv {
     position: absolute;
     top: 0;
     left: 0;
@@ -1110,24 +1110,24 @@ body {
     margin-top: 30px;
 }
 
-.particular .caption{
+.particular .caption {
     width: 1150px;
     height: 45px;
     background: #eeeeee;
 }
 
-.particular .caption span{
+.particular .caption span {
     line-height: 43px;
     font-size: 18px;
     color: #0194DF;
     padding: 0 30px;
 }
 
-.particular .caption.menu span{
+.particular .caption.menu span {
     display: inline-block;
     color: #333333;
     cursor: pointer;
-} 
+}
 
 .particular .caption.menu span.current,
 .particular .caption.menu span:hover {
@@ -1135,21 +1135,21 @@ body {
     border-bottom: 2px solid #0194DF;
 }
 
-.particular .picture{
+.particular .picture {
     margin-bottom: 20px;
 }
 
-.particular .more li{
+.particular .more li {
     float: left;
     margin: 0 11.75px;
     margin-top: 20px;
 }
 
-.particular .more li img{
+.particular .more li img {
     border: 2px solid #cccccc;
 }
 
-.particular .more li p{
+.particular .more li p {
     font-size: 18px;
     text-align: center;
     margin: 10px 0 40px;
@@ -1160,68 +1160,67 @@ body {
     color: #1E72F7;
 }
 
-.contact{
+.contact {
     width: 100%;
     background: #ffffff;
     padding: 30px 0 60px;
 }
 
-.contact>div{
+.contact>div {
     width: 1150px;
     margin: 0 auto;
-
 }
 
-.contact .info{
+.contact .info {
     float: left;
     margin-left: 20px;
     padding-bottom: 100px;
     background: url(../images/bg_d.jpg) no-repeat bottom right;
 }
 
-.contact .info p{
+.contact .info p {
     font-size: 15px;
     color: #333333;
-    line-height:200%;
+    line-height: 200%;
 }
 
-.contact .info .caption{
+.contact .info .caption {
     font-size: 18px;
     color: #000000;
     margin-top: 40px;
 }
 
-.contact .info .caption:first-child{
+.contact .info .caption:first-child {
     margin-top: 0;
 }
 
-.contact .map{
+.contact .map {
     float: right
 }
 
-.after-sales{
+.after-sales {
     width: 100%;
     background: #ffffff;
     padding: 30px 0 60px;
 }
 
-.after-sales>div{
+.after-sales>div {
     width: 1150px;
     margin: 0 auto;
 }
 
-.after-sales img{
+.after-sales img {
     float: left;
 }
 
-.after-sales h2{
+.after-sales h2 {
     font-size: 16px;
     color: #014BBD;
     font-weight: 700;
     text-align: center;
 }
 
-.after-sales p{
+.after-sales p {
     width: 700px;
     font-size: 14px;
     line-height: 200%;
@@ -1229,20 +1228,201 @@ body {
     float: right;
 }
 
-.after-sales p span{
+.after-sales p span {
     font-weight: 700;
     color: #222222;
 }
 
-.disk{
+.disk {
     width: 100%;
     padding: 20px 0 60px;
     background: #ffffff;
     text-align: center;
 }
 
-.support{
+.support {
     width: 100%;
     background: #ffffff;
     padding: 30px 0 60px;
+}
+
+.support>div {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.support img {
+    float: right;
+    padding-left: 20PX;
+    padding-bottom: 20px;
+}
+
+.support p {
+    font-size: 14px;
+    line-height: 200%;
+    padding-bottom: 30px;
+}
+
+.support .caption {
+    padding-bottom: 0;
+    color: #0048A5;
+    font-weight: bold;
+}
+
+.news {
+    width: 100%;
+    background: #ffffff;
+    padding: 30px 0 60px;
+}
+
+.news>div {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.news dl {
+    height: 155px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 20px;
+}
+
+.news dl dt {
+    float: left;
+}
+
+.news dl dd {
+    float: right;
+    width: 855px;
+    margin-left: 20px;
+}
+
+.news dl dd .title {
+    display: inline;
+}
+
+.news dl dd .title a {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.news dl dd .time {
+    float: right;
+    font-size: 14px;
+}
+
+.news dl dd .des {
+    font-size: 14px;
+    line-height: 240%;
+    text-indent: 2em;
+}
+
+.news dl dd .more {
+    display: inline-block;
+    width: 85px;
+    height: 30px;
+    border: 1px solid #005088;
+    font-size: 14px;
+    color: #005088;
+    text-align: center;
+    line-height: 30px;
+}
+
+.news-detail {
+    width: 100%;
+    background: #ffffff;
+    padding: 30px 0 60px;
+}
+
+.news-detail>div {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.news-detail h1 {
+    font-size: 20px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.news-detail .news-caption {
+    font-size: 14px;
+    color: #888888;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cccccc;
+    margin-bottom: 10px;
+}
+
+.news-detail .news-caption span {
+    margin-right: 30px;
+}
+
+.news-detail .news-content {
+    font-size: 14px;
+    line-height: 200%;
+    text-indent: 2em;
+}
+
+.news-detail .news-content p {
+    margin-bottom: 20px;
+}
+
+.news_b {
+    width: 100%;
+    background: #ffffff;
+    padding: 30px 0 60px;
+}
+
+.news_b>div {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.news_b ul li {
+    float: left;
+    width: 256px;
+    margin-right: 28px;
+}
+
+.news_b ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.news_b ul li div.title {
+    color: #222222;
+    font-size: 16px;
+    margin: 5px 0 10px;
+}
+
+.news_b ul li div.title:hover {
+    color: #0C59D2;
+}
+
+.news_b ul li div.des {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.shop {
+    width: 100%;
+    background: #ffffff;
+    padding: 30px 0 60px;
+}
+
+.shop>div {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.shop ul li img {
+    width: 100%;
+    height: 350px;
 }

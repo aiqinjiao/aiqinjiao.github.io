@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <title>企业简介，电气|专业焊接设备及服务提供商</title>
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+
+    <link href="static/css/style.css" rel="stylesheet"/>
+    <link href="static/css/anim.css" rel="stylesheet"/>
+    <link href="static/css/css.css" rel="stylesheet"/>
+	
+    <script src="static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.superslide.2.1.1.js">//pc导航</script>
+    <script src="static/js/public.js">//导航</script>
+    <script src="static/js/anim.js">//动画</script>
+	
+</head>
+
+<body>
+<header class="header-v1">
+    <!-- S top-main -->
+    <div class="top-main">
+        <div class="logo1"><a href="index.html"><img src="static/picture/logo.png" alt=""/></a></div>
+		<a href="#" class="languages"><img src="static/picture/top_pic2.png" alt=""/></a>
+
+
+        <div class="top_search"><em></em>
+
+            <div class="search_con">
+                <form onSubmit="return checktop(this);" action="#" method="get" name="search"  id="form3">
+                <input class="input1" name="title" value="Search" onFocus="if(value=='Search'){value=''}" onBlur="if(value==''){value='Search'}">
+                <input name="c" type="hidden" value="Index">
+                <input name="a" type="hidden" value="Search">
+                <input type="submit" class="bnts"  value="">
+                </form>
+                <script type="text/javascript">
+                    function checktop(nForm){
+                        if(nForm.title.value=="Search")
+                        {   alert("请填写搜索关键字!");
+                            nForm.title.focus();
+                            return false;
+                        }
+                    }
+                    function checktop_en(nForm){
+                        if(nForm.title.value=="Search")
+                        {   alert("Please fill in the search keywords");
+                            nForm.title.focus();
+                            return false;
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="top-main-content"><!-- S nav -->
+            <div class="navBar">
+                <ul class="nav clearfix">
+                    <li id="m1" class="m"><h3><a href="index.html" title="首页">首页</a></h3></li>
+                    <li id="m2" class="m on"><h3><a href="QiYeJianJie.html" title="关于我们">关于我们</a></h3>
+                        <div class="sub" style="display:none">
+                            <dl>
+                                <dd><a href="QiYeJianJie.html">企业简介</a></dd>
+								<dd><a href="FaZhanLiCheng.html">发展历程</a></dd>
+								<dd><a href="QiYeWenHua.html">企业文化</a></dd>
+								<dd><a href="QiYeRongYu.html">企业荣誉</a></dd>
+								<dd><a href="XinWenDongTai.html">新闻动态</a></dd>
+								<dd><a href="ZhaoXianNaShi.html">招贤纳士</a></dd>
+							</dl>
+                        </div>
+                    </li><li id="m3" class="m "><h3><a href="product.html" title="产品与服务">产品与服务</a></h3>
+                        <div class="sub" style="display:none">
+                            <dl>
+                                <dd><a href="product.html">气保焊系列</a></dd>
+								<dd><a href="product.html">氩弧焊系列</a></dd>
+								<dd><a href="product.html">手工焊系列</a></dd>
+								<dd><a href="product.html">切割机系列</a></dd>
+								<dd><a href="product.html">埋弧焊系列</a></dd>
+								<dd><a href="product.html">电子元器件</a></dd>
+							</dl>
+                        </div>
+                    </li><li id="m4" class="m "><h3><a href="news.html" title="资讯中心">资讯中心</a></h3>
+                        <div class="sub" style="display:none">
+                            <dl>
+                                <dd><a href="news.html">焊接资讯</a></dd>
+								<dd><a href="news.html">专业知识</a></dd>
+								<dd><a href="XiaZaiZhongXin.html">下载中心</a></dd>
+							</dl>
+                        </div>
+                    </li><li id="m5" class="m "><h3><a href="news.html" title="技术服务">技术服务</a></h3>
+                        <div class="sub" style="display:none">
+                            <dl>
+                                <dd><a href="news.html">研发中心</a></dd>
+								<dd><a href="ShouHouFuWu.html">售后服务</a></dd>
+								<dd><a href="ZaiXianZiXun.html">在线咨询</a></dd>
+							</dl>
+                        </div>
+                    </li><li id="m6" class="m "><h3><a href="GongChengAnLi.html" title="工程案例">工程案例</a></h3>
+                        <div class="sub" >
+                            <dl></dl>
+                        </div>
+                    </li><li id="m7" class="m"><h3><a href="LianXiWoMen.html" title="联系我们">联系我们</a></h3>
+                        <div class="sub" >
+                            <dl></dl>
+                        </div>
+                    </li>
+				</ul>
+            </div>
+            <script type="text/javascript"> jQuery(".nav").slide({
+                type: "menu",
+                titCell: ".m",
+                targetCell: ".sub",
+                effect: "slideDown",
+                delayTime: 300,
+                triggerTime: 100,
+                returnDefault: true
+            });</script>
+            <!-- E nav-->
+    	</div>
+    </div>
+    <!-- E top-main -->
+    <div class="c_l"></div>
+</header>
+
+<!-- S touch-top-wrapper -->
+<div class="touch-top">
+    <div class="touch-top-wrapper clearfix">
+        <div class="touch-logo" skinobjectzone="HtmlLogo_1514"><a class="" href="index.html"><img src="static/picture/logo.png" alt="全彩照明"/></a></div>
+        <!-- S touch-navigation -->
+        <div class="touch-navigation">
+            <div class="touch-toggle">
+                <ul>
+                    <li class="touch-toggle-item-last"><a href="javascript:void(0);" class="drawer-menu"
+                                                          data-drawer="search_div"><i
+                            class="touch-icon-search"><span>搜索</span></i></a></li>
+                    <li class="touch-toggle-item-last"><a href="javascript:;" class="drawer-menu"
+                                                          data-drawer="drawer-section-menu"><i
+                            class="touch-icon-menu"></i><span>导航</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- E touch-navigation --></div>
+    <!-- S touch-top -->
+    <div class="touch-toggle-content touch-top-home">
+        <!--手机搜索begin-->
+        <div class="drawer-section search_div">
+            <div class="search_con"><input name="names" type="text" class="input1" value="Search"
+                                           onFocus="if(value=='Search'){value=''}"
+                                           onBlur="if(value==''){value='Search'}"/><input type="submit" value=""
+                                                                                          class="bnt1"/>
+            </div>
+        </div>
+        <!--手机搜索end-->
+        <!--手机菜单begin-->
+        <div class="drawer-section drawer-section-menu">
+            <div class="touch-menu" skinobjectzone="menu_2005">
+                <ul>
+                    <li><a href="index.html"><span>首页</span></a></li>
+                                        
+                    <li><a href="javascript:;"><span>关于我们</span><i class="touch-arrow-down"></i> </a> 
+                        <ul>  
+                            <li><a href="QiYeJianJie.html"><span>企业简介</span></a></li>
+							<li><a href="FaZhanLiCheng.html"><span>发展历程</span></a></li>
+							<li><a href="QiYeWenHua.html"><span>企业文化</span></a></li>
+							<li><a href="QiYeRongYu.html"><span>企业荣誉</span></a></li>
+							<li><a href="XinWenDongTai.html"><span>新闻动态</span></a></li>
+							<li><a href="ZhaoXianNaShi.html"><span>招贤纳士</span></a></li>
+						</ul>
+                    </li>                    
+                    <li> <a href="javascript:;"><span>产品与服务</span><i class="touch-arrow-down"></i> </a> 
+                        <ul>  
+                            <li><a href="product.html"><span>气保焊系列</span></a></li>
+							<li><a href="product.html"><span>氩弧焊系列</span></a></li>
+							<li><a href="product.html"><span>手工焊系列</span></a></li>
+							<li><a href="product.html"><span>切割机系列</span></a></li>
+							<li><a href="product.html"><span>埋弧焊系列</span></a></li>
+							<li><a href="product.html"><span>电子元器件</span></a></li>
+						</ul>
+                    </li>                    
+                    <li> <a href="javascript:;"><span>资讯中心</span><i class="touch-arrow-down"></i> </a> 
+                        <ul>  
+                            <li><a href="news.html"><span>焊接资讯</span></a></li>
+							<li><a href="news.html"><span>专业知识</span></a></li>
+							<li><a href="XiaZaiZhongXin.html"><span>下载中心</span></a></li>
+						</ul>
+                    </li>                    
+                    <li> <a href="javascript:;"><span>技术服务</span><i class="touch-arrow-down"></i> </a> 
+                        <ul>  
+                            <li><a href="news.html"><span>研发中心</span></a></li>
+							<li><a href="ShouHouFuWu.html"><span>售后服务</span></a></li>
+							<li><a href="ZaiXianZiXun.html"><span>在线咨询</span></a></li>
+						</ul>
+                    </li>                    
+                    <li><a href=""><span>工程案例</span> </a> 
+                        <ul></ul>
+                    </li>                    
+                    <li><a href=""><span>联系我们</span> </a> 
+                        <ul></ul>
+                    </li>                    
+                 	<li><a href="#" class="languages">EN</a>                 </li>
+                </ul>
+                <div class="closetitle"><img src="static/picture/nav_bg2.png"></div>
+            </div>
+        </div>
+        <!--手机菜单end-->
+
+    </div>
+    <!-- E touch-top -->
+</div>
+
+<div class="touch_bg">&nbsp;</div>
+<!-- E touch-top-wrapper -->
+<div class="blank_h">&nbsp;</div>
+<!--正文begin-->
+<div class="about_bg" style="background: url(static/images/59673b861571f.jpg) center top no-repeat;">
+    <div class="about_con anim anim-1" >
+        <center><p style="text-align: center"><br/></p></center><p><br/><br/><br/>
+ &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 0);">&nbsp;</span></p><p><span style="color: rgb(0, 0, 0);"><br/></span></p><p><span style="color: rgb(0, 0, 0);"><br/></span></p><p><span style="color: rgb(0, 0, 0);"><br/></span></p><p><span style="color: rgb(0, 0, 0);"><br/></span></p><p><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; &nbsp;深圳电气有限公司是一家坚持技术传承与发展变革，持续专注于逆变焊割设备、焊接自动化、IGBT芯片、IGBT驱动芯片、智能功率模块及数码变频发电机的研发、生产、销售及服务于一体的国内知名技术驱动型企业，业务遍及五大洲70多个国家和地区。
+ &nbsp; &nbsp; &nbsp; &nbsp;</span></p><p><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; &nbsp;公司拥有焊机POWERTEK品牌，分为专业型（POWERTEK PROFFESSIONAL）,基础型（POWERTEK BASIC），共10大系列100多种型号产品。主营全数字化气体保护焊机、全数字化手工弧焊机、数字化全功能脉冲氩弧焊机、数字化等离子切割机、多功能精细化埋弧焊机、600V和1200V中小功率IGBT系列产品、600VIGBT驱动芯片全系列产品、650V450A/1200V450A智能IGBT功率模块产品、数码变频发电机等产品，广泛应运用于钢构、石油、船舶、化工、电力、冶金、汽车、航空、铁路、建筑等行业。
+ &nbsp; &nbsp; &nbsp; &nbsp;</span></p><p><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; &nbsp;自成立以来，公司产品质量优良，信誉卓著，全面实施ISO 9001：2008质量管理体系，已通过3C、CE、EMC、美国/加拿大CSA等多项国际体系认证。我们的研发团队在行业里有深度的技术积累，工程师在其所在细分领域专注开发10年以上，多项新产品替代进口产品，满足国家重点工程的需求。截至目前，公司拥有有效期内国家专利31项，其中发明专利3项、实用新型专利8项、外观设计专利12项，及计算机软件著作权8项。 &nbsp; &nbsp; &nbsp; &nbsp;<br/>&nbsp; &nbsp; &nbsp; &nbsp;</span></p><p><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; <strong>&nbsp;<span style="font-size: 14px;">使命与远景</span></strong><br/>
+ &nbsp; &nbsp; &nbsp; &nbsp;公司以“掌握核心科技，引领行业智能”为创新理念，以“中国品牌，世界品质”为使命，为客户提供最具性价比的高端产品及满意的服务，推动中国焊接产业的发展，成为“中国领先的焊接与切割整体解决方案提供商”！</span></p>    </div>
+</div>
+<!--正文end-->
+
+<!--尾部begin-->
+<div class="foot_bg">
+    <div class="foot_con">
+        <div class="foot_con_l">
+            <img src="static/picture/logo2.png" class="foot_con_logo"/>
+
+            <div class="foot_con_a">
+                <a href="#">首页</a>&nbsp;｜&nbsp;
+                <a href="#">关于我们</a>&nbsp;｜&nbsp;<a href="#">产品与服务</a>&nbsp;｜&nbsp;<a href="#">资讯中心</a>&nbsp;｜&nbsp;<a href="#">技术服务</a>&nbsp;｜&nbsp;<a href="#">工程案例</a>&nbsp;｜&nbsp;<a href="#">联系我们</a>            </div>
+        </div>
+        <div class="foot_con_r">
+            <img src="static/picture/weixin.jpg"/>
+            <ul>
+                <li><a href="tel:400-xxxx-1238" class="tel">400-xxx-1238</a></li>
+                <li><a href="mailto:sales@xxxxx.com" class="email">sales@xxxxx.com</a></li>
+                <li>电气有限公司 All rights reserved</li>
+            </ul>
+        </div>
+        <div class="c_l"></div>
+    </div>
+    <div class="foot_bg2">
+        <div class="foot_con2">
+            技术支持
+            <div class="footer_fx_r">
+                <ul>
+                    <li class="foot_weixin"><a href="javascript:void(0)"><div class="ewm"><img src="static/picture/weixin.jpg"></div></a></li>
+                    <li class="foot_qq"><a href="#">&nbsp;</a></li>
+                    <li class="foot_weibo"><a href="javascript:void(0)" class="jiathis_button_tqq">&nbsp;</a></li>
+                    <li class="foot_sinna"><a href="javascript:void(0)" class="jiathis_button_tsina">&nbsp;</a></li>
+
+                </ul>
+            </div>
+            <script type="text/javascript" src="static/js/jia.js" charset="utf-8"></script>
+            <style>
+                .jiathis_style .jtico_tqq {
+                    background-position: -80px -64px;
+                }
+
+                .jiathis_style .jtico_tsina {
+                    background-position: -80px -64px;
+                }
+            </style>
+
+            <span class="r">分享到：</span>
+        </div>
+    </div>
+</div>
+<a href="javascript:void(0)" class="gotop" onClick="goTop()"></a>
+<!--尾部end-->
+<script language="javascript" src="static/js/foot.js"></script>
+</body>
+</html>
